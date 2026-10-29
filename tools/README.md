@@ -7,7 +7,7 @@ Miden los requisitos no funcionales que dependen de la red, con el ESP32 real co
 | `measure_response_time.py` | RNF3 | Tiempo desde publicar un comando en `leds/cmd` hasta recibir el `leds/state` que lo confirma (ida y vuelta PC → broker → OI → broker → PC). |
 | `measure_publish_rate.py` | RNF4 | Lecturas por segundo en `distance`, en ventanas de 10 s, más los huecos de `seq` y las lecturas `null`. |
 
-`tools_config.py` reúne los umbrales, tiempos y client IDs de las pruebas. El contrato MQTT (broker, tópicos, QoS y valores de los LEDs) se importa de `mcp_server/config.py`, así no hay dos copias que puedan diferir.
+`tools_config.py` reúne los umbrales, tiempos y client IDs de las pruebas. El contrato MQTT (broker, tópicos, QoS y valores de los LEDs) se importa de `mcp_server/config.py`, así no hay dos copias que puedan diferir. `report.py` imprime cada línea y, con `--output`, guarda exactamente lo mismo en un archivo.
 
 Cada script termina con una línea `PASS`, `FAIL` o `NOT ENOUGH DATA`.
 

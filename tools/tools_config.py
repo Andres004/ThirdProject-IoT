@@ -50,6 +50,7 @@ PAUSE_BETWEEN_COMMANDS_S: float = 1.0  # Gap between commands so they never over
 ONLINE_WAIT_TIMEOUT_S: float = 10.0  # Max wait for the retained "online" after subscribing
 TEST_LED: str = "red"  # LED switched during the test
 RESPONSE_PERCENTILE: int = 95  # Percentile reported in the summary (p95)
+PERCENT_SCALE: int = 100  # Percentiles are expressed out of 100
 
 # RNF4: publish rate of the distance topic.
 MIN_READINGS_PER_S: float = 2.0  # Requirement limit for the slowest window

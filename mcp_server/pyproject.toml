@@ -22,3 +22,6 @@ select = ["E", "W", "F", "I", "N", "D"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "pep257"
+
+[tool.ruff.lint.isort]
+known-first-party = ["config", "mqtt_bridge", "report", "tools_config"]
