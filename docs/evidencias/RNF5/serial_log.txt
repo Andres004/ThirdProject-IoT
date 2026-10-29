@@ -1,0 +1,1400 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+[t_ms=       29] BOOT             reset_reason=1
+[t_ms=      129] WIFI_CONNECTING  ssid=<hidden> client_id=sis234-g1-oi-B4BFE962350C
+[t_ms=      372] WIFI_CONNECTED   ip=172.20.10.3 rssi_dbm=-60
+[t_ms=      372] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[t_ms=     3190] MQTT_RETRY       state=-4 took_ms=2817
+[t_ms=     3195] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1,"cm":37.7} reason=not_connected
+[t_ms=     3594] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":2,"cm":37.8} reason=not_connected
+[t_ms=     3994] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":3,"cm":37.4} reason=not_connected
+[t_ms=     4394] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":4,"cm":36.9} reason=not_connected
+[t_ms=     4797] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":5,"cm":86.4} reason=not_connected
+[t_ms=     5190] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[t_ms=     6214] MQTT_CONNECTED   took_ms=1024
+[t_ms=     6218] PUB              topic=sis234/grupo1/status payload=online
+[t_ms=     6218] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=     6229] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=     6255] PUB              topic=sis234/grupo1/distance payload={"seq":6,"cm":null}
+[t_ms=     6655] PUB              topic=sis234/grupo1/distance payload={"seq":7,"cm":null}
+[t_ms=     7038] PUB              topic=sis234/grupo1/distance payload={"seq":8,"cm":86.5}
+[t_ms=     7457] PUB              topic=sis234/grupo1/distance payload={"seq":9,"cm":null}
+[t_ms=     7837] PUB              topic=sis234/grupo1/distance payload={"seq":10,"cm":36.4}
+[t_ms=     8235] PUB              topic=sis234/grupo1/distance payload={"seq":11,"cm":36.4}
+[t_ms=     8635] PUB              topic=sis234/grupo1/distance payload={"seq":12,"cm":36.4}
+[t_ms=     9035] PUB              topic=sis234/grupo1/distance payload={"seq":13,"cm":36.7}
+[t_ms=     9435] PUB              topic=sis234/grupo1/distance payload={"seq":14,"cm":36.9}
+[t_ms=     9834] PUB              topic=sis234/grupo1/distance payload={"seq":15,"cm":36.9}
+[t_ms=    10235] PUB              topic=sis234/grupo1/distance payload={"seq":16,"cm":36.9}
+[t_ms=    10634] PUB              topic=sis234/grupo1/distance payload={"seq":17,"cm":36.9}
+[t_ms=    11035] PUB              topic=sis234/grupo1/distance payload={"seq":18,"cm":36.9}
+[t_ms=    11434] PUB              topic=sis234/grupo1/distance payload={"seq":19,"cm":36.9}
+[t_ms=    11834] PUB              topic=sis234/grupo1/distance payload={"seq":20,"cm":36.9}
+[t_ms=    12234] PUB              topic=sis234/grupo1/distance payload={"seq":21,"cm":36.9}
+[t_ms=    12634] PUB              topic=sis234/grupo1/distance payload={"seq":22,"cm":36.9}
+[t_ms=    13034] PUB              topic=sis234/grupo1/distance payload={"seq":23,"cm":19.8}
+[t_ms=    13455] PUB              topic=sis234/grupo1/distance payload={"seq":24,"cm":null}
+[t_ms=    13857] PUB              topic=sis234/grupo1/distance payload={"seq":25,"cm":null}
+[t_ms=    14236] PUB              topic=sis234/grupo1/distance payload={"seq":26,"cm":19.5}
+[t_ms=    14636] PUB              topic=sis234/grupo1/distance payload={"seq":27,"cm":19.4}
+[t_ms=    15036] PUB              topic=sis234/grupo1/distance payload={"seq":28,"cm":22.9}
+[t_ms=    15436] PUB              topic=sis234/grupo1/distance payload={"seq":29,"cm":19.5}
+[t_ms=    15836] PUB              topic=sis234/grupo1/distance payload={"seq":30,"cm":20.8}
+[t_ms=    16255] PUB              topic=sis234/grupo1/distance payload={"seq":31,"cm":null}
+[t_ms=    16634] PUB              topic=sis234/grupo1/distance payload={"seq":32,"cm":19.1}
+[t_ms=    17037] PUB              topic=sis234/grupo1/distance payload={"seq":33,"cm":86.2}
+[t_ms=    17437] PUB              topic=sis234/grupo1/distance payload={"seq":34,"cm":86.3}
+[t_ms=    17833] PUB              topic=sis234/grupo1/distance payload={"seq":35,"cm":20.8}
+[t_ms=    18236] PUB              topic=sis234/grupo1/distance payload={"seq":36,"cm":18.5}
+[t_ms=    18634] PUB              topic=sis234/grupo1/distance payload={"seq":37,"cm":18.5}
+[t_ms=    19036] PUB              topic=sis234/grupo1/distance payload={"seq":38,"cm":18.5}
+[t_ms=    19437] PUB              topic=sis234/grupo1/distance payload={"seq":39,"cm":19.5}
+[t_ms=    19834] PUB              topic=sis234/grupo1/distance payload={"seq":40,"cm":18.5}
+[t_ms=    20235] PUB              topic=sis234/grupo1/distance payload={"seq":41,"cm":18.5}
+[t_ms=    20634] PUB              topic=sis234/grupo1/distance payload={"seq":42,"cm":18.5}
+[t_ms=    21034] PUB              topic=sis234/grupo1/distance payload={"seq":43,"cm":18.5}
+[t_ms=    21436] PUB              topic=sis234/grupo1/distance payload={"seq":44,"cm":18.5}
+[t_ms=    21834] PUB              topic=sis234/grupo1/distance payload={"seq":45,"cm":18.5}
+[t_ms=    22234] PUB              topic=sis234/grupo1/distance payload={"seq":46,"cm":18.5}
+[t_ms=    22634] PUB              topic=sis234/grupo1/distance payload={"seq":47,"cm":20.7}
+[t_ms=    23034] PUB              topic=sis234/grupo1/distance payload={"seq":48,"cm":18.5}
+[t_ms=    23437] PUB              topic=sis234/grupo1/distance payload={"seq":49,"cm":36.9}
+[t_ms=    23857] PUB              topic=sis234/grupo1/distance payload={"seq":50,"cm":null}
+[t_ms=    24255] PUB              topic=sis234/grupo1/distance payload={"seq":51,"cm":null}
+[t_ms=    24635] PUB              topic=sis234/grupo1/distance payload={"seq":52,"cm":36.9}
+[t_ms=    25034] PUB              topic=sis234/grupo1/distance payload={"seq":53,"cm":25.8}
+[t_ms=    25434] PUB              topic=sis234/grupo1/distance payload={"seq":54,"cm":26.7}
+[t_ms=    25834] PUB              topic=sis234/grupo1/distance payload={"seq":55,"cm":26.7}
+[t_ms=    26234] PUB              topic=sis234/grupo1/distance payload={"seq":56,"cm":26.4}
+[t_ms=    26657] PUB              topic=sis234/grupo1/distance payload={"seq":57,"cm":null}
+[t_ms=    27037] PUB              topic=sis234/grupo1/distance payload={"seq":58,"cm":36.5}
+[t_ms=    27436] PUB              topic=sis234/grupo1/distance payload={"seq":59,"cm":30.0}
+[t_ms=    27836] PUB              topic=sis234/grupo1/distance payload={"seq":60,"cm":30.0}
+[t_ms=    28236] PUB              topic=sis234/grupo1/distance payload={"seq":61,"cm":28.2}
+[t_ms=    28634] PUB              topic=sis234/grupo1/distance payload={"seq":62,"cm":29.0}
+[t_ms=    29034] PUB              topic=sis234/grupo1/distance payload={"seq":63,"cm":26.4}
+[t_ms=    29434] PUB              topic=sis234/grupo1/distance payload={"seq":64,"cm":27.9}
+[t_ms=    29834] PUB              topic=sis234/grupo1/distance payload={"seq":65,"cm":25.8}
+[t_ms=    30235] PUB              topic=sis234/grupo1/distance payload={"seq":66,"cm":38.0}
+[t_ms=    30634] PUB              topic=sis234/grupo1/distance payload={"seq":67,"cm":29.3}
+[t_ms=    31034] PUB              topic=sis234/grupo1/distance payload={"seq":68,"cm":27.5}
+[t_ms=    31436] PUB              topic=sis234/grupo1/distance payload={"seq":69,"cm":30.0}
+[t_ms=    31836] PUB              topic=sis234/grupo1/distance payload={"seq":70,"cm":29.8}
+[t_ms=    32236] PUB              topic=sis234/grupo1/distance payload={"seq":71,"cm":25.0}
+[t_ms=    32636] PUB              topic=sis234/grupo1/distance payload={"seq":72,"cm":25.9}
+[t_ms=    33036] PUB              topic=sis234/grupo1/distance payload={"seq":73,"cm":29.5}
+[t_ms=    33436] PUB              topic=sis234/grupo1/distance payload={"seq":74,"cm":29.8}
+[t_ms=    33836] PUB              topic=sis234/grupo1/distance payload={"seq":75,"cm":24.7}
+[t_ms=    34236] PUB              topic=sis234/grupo1/distance payload={"seq":76,"cm":27.3}
+[t_ms=    34655] PUB              topic=sis234/grupo1/distance payload={"seq":77,"cm":null}
+[t_ms=    35034] PUB              topic=sis234/grupo1/distance payload={"seq":78,"cm":25.0}
+[t_ms=    35434] PUB              topic=sis234/grupo1/distance payload={"seq":79,"cm":25.0}
+[t_ms=    35834] PUB              topic=sis234/grupo1/distance payload={"seq":80,"cm":25.5}
+[t_ms=    36234] PUB              topic=sis234/grupo1/distance payload={"seq":81,"cm":29.0}
+[t_ms=    36634] PUB              topic=sis234/grupo1/distance payload={"seq":82,"cm":23.8}
+[t_ms=    37034] PUB              topic=sis234/grupo1/distance payload={"seq":83,"cm":25.5}
+[t_ms=    37455] PUB              topic=sis234/grupo1/distance payload={"seq":84,"cm":null}
+[t_ms=    37834] PUB              topic=sis234/grupo1/distance payload={"seq":85,"cm":25.0}
+[t_ms=    38257] PUB              topic=sis234/grupo1/distance payload={"seq":86,"cm":null}
+[t_ms=    38636] PUB              topic=sis234/grupo1/distance payload={"seq":87,"cm":23.8}
+[t_ms=    39034] PUB              topic=sis234/grupo1/distance payload={"seq":88,"cm":20.4}
+[t_ms=    39437] PUB              topic=sis234/grupo1/distance payload={"seq":89,"cm":84.7}
+[t_ms=    39837] PUB              topic=sis234/grupo1/distance payload={"seq":90,"cm":82.7}
+[t_ms=    40237] PUB              topic=sis234/grupo1/distance payload={"seq":91,"cm":81.8}
+[t_ms=    40639] PUB              topic=sis234/grupo1/distance payload={"seq":92,"cm":81.5}
+[t_ms=    41057] PUB              topic=sis234/grupo1/distance payload={"seq":93,"cm":null}
+[t_ms=    41437] PUB              topic=sis234/grupo1/distance payload={"seq":94,"cm":83.4}
+[t_ms=    41837] PUB              topic=sis234/grupo1/distance payload={"seq":95,"cm":84.7}
+[t_ms=    42237] PUB              topic=sis234/grupo1/distance payload={"seq":96,"cm":85.9}
+[t_ms=    42637] PUB              topic=sis234/grupo1/distance payload={"seq":97,"cm":83.6}
+[t_ms=    43038] PUB              topic=sis234/grupo1/distance payload={"seq":98,"cm":87.5}
+[t_ms=    43457] PUB              topic=sis234/grupo1/distance payload={"seq":99,"cm":null}
+[t_ms=    43857] PUB              topic=sis234/grupo1/distance payload={"seq":100,"cm":null}
+[t_ms=    44257] PUB              topic=sis234/grupo1/distance payload={"seq":101,"cm":null}
+[t_ms=    44657] PUB              topic=sis234/grupo1/distance payload={"seq":102,"cm":null}
+[t_ms=    45055] PUB              topic=sis234/grupo1/distance payload={"seq":103,"cm":null}
+[t_ms=    45455] PUB              topic=sis234/grupo1/distance payload={"seq":104,"cm":null}
+[t_ms=    45855] PUB              topic=sis234/grupo1/distance payload={"seq":105,"cm":null}
+[t_ms=    46255] PUB              topic=sis234/grupo1/distance payload={"seq":106,"cm":null}
+[t_ms=    46637] PUB              topic=sis234/grupo1/distance payload={"seq":107,"cm":84.0}
+[t_ms=    47037] PUB              topic=sis234/grupo1/distance payload={"seq":108,"cm":84.8}
+[t_ms=    47437] PUB              topic=sis234/grupo1/distance payload={"seq":109,"cm":84.8}
+[t_ms=    47855] PUB              topic=sis234/grupo1/distance payload={"seq":110,"cm":null}
+[t_ms=    48255] PUB              topic=sis234/grupo1/distance payload={"seq":111,"cm":null}
+[t_ms=    48655] PUB              topic=sis234/grupo1/distance payload={"seq":112,"cm":null}
+[t_ms=    49037] PUB              topic=sis234/grupo1/distance payload={"seq":113,"cm":84.3}
+[t_ms=    49437] PUB              topic=sis234/grupo1/distance payload={"seq":114,"cm":84.7}
+[t_ms=    49838] PUB              topic=sis234/grupo1/distance payload={"seq":115,"cm":83.3}
+[t_ms=    50237] PUB              topic=sis234/grupo1/distance payload={"seq":116,"cm":83.8}
+[t_ms=    50637] PUB              topic=sis234/grupo1/distance payload={"seq":117,"cm":85.0}
+[t_ms=    51037] PUB              topic=sis234/grupo1/distance payload={"seq":118,"cm":83.7}
+[t_ms=    51437] PUB              topic=sis234/grupo1/distance payload={"seq":119,"cm":84.2}
+[t_ms=    51837] PUB              topic=sis234/grupo1/distance payload={"seq":120,"cm":83.4}
+[t_ms=    52237] PUB              topic=sis234/grupo1/distance payload={"seq":121,"cm":83.5}
+[t_ms=    52655] PUB              topic=sis234/grupo1/distance payload={"seq":122,"cm":null}
+[t_ms=    53055] PUB              topic=sis234/grupo1/distance payload={"seq":123,"cm":null}
+[t_ms=    53437] PUB              topic=sis234/grupo1/distance payload={"seq":124,"cm":83.5}
+[t_ms=    53837] PUB              topic=sis234/grupo1/distance payload={"seq":125,"cm":83.4}
+[t_ms=    54237] PUB              topic=sis234/grupo1/distance payload={"seq":126,"cm":84.3}
+[t_ms=    54655] PUB              topic=sis234/grupo1/distance payload={"seq":127,"cm":null}
+[t_ms=    55037] PUB              topic=sis234/grupo1/distance payload={"seq":128,"cm":84.3}
+[t_ms=    55437] PUB              topic=sis234/grupo1/distance payload={"seq":129,"cm":84.0}
+[t_ms=    55837] PUB              topic=sis234/grupo1/distance payload={"seq":130,"cm":84.7}
+[t_ms=    56238] PUB              topic=sis234/grupo1/distance payload={"seq":131,"cm":83.8}
+[t_ms=    56657] PUB              topic=sis234/grupo1/distance payload={"seq":132,"cm":null}
+[t_ms=    57037] PUB              topic=sis234/grupo1/distance payload={"seq":133,"cm":84.2}
+[t_ms=    57437] PUB              topic=sis234/grupo1/distance payload={"seq":134,"cm":83.9}
+[t_ms=    57839] PUB              topic=sis234/grupo1/distance payload={"seq":135,"cm":83.9}
+[t_ms=    58239] PUB              topic=sis234/grupo1/distance payload={"seq":136,"cm":85.6}
+[t_ms=    58639] PUB              topic=sis234/grupo1/distance payload={"seq":137,"cm":84.0}
+[t_ms=    59039] PUB              topic=sis234/grupo1/distance payload={"seq":138,"cm":83.5}
+[t_ms=    59439] PUB              topic=sis234/grupo1/distance payload={"seq":139,"cm":83.1}
+[t_ms=    59838] PUB              topic=sis234/grupo1/distance payload={"seq":140,"cm":85.2}
+[t_ms=    60237] PUB              topic=sis234/grupo1/distance payload={"seq":141,"cm":84.3}
+[t_ms=    60637] PUB              topic=sis234/grupo1/distance payload={"seq":142,"cm":84.8}
+[t_ms=    61037] PUB              topic=sis234/grupo1/distance payload={"seq":143,"cm":84.7}
+[t_ms=    61437] PUB              topic=sis234/grupo1/distance payload={"seq":144,"cm":85.8}
+[t_ms=    61838] PUB              topic=sis234/grupo1/distance payload={"seq":145,"cm":86.7}
+[t_ms=    62238] PUB              topic=sis234/grupo1/distance payload={"seq":146,"cm":87.4}
+[t_ms=    62655] PUB              topic=sis234/grupo1/distance payload={"seq":147,"cm":null}
+[t_ms=    63038] PUB              topic=sis234/grupo1/distance payload={"seq":148,"cm":87.8}
+[t_ms=    63455] PUB              topic=sis234/grupo1/distance payload={"seq":149,"cm":null}
+[t_ms=    63855] PUB              topic=sis234/grupo1/distance payload={"seq":150,"cm":null}
+[t_ms=    64255] PUB              topic=sis234/grupo1/distance payload={"seq":151,"cm":null}
+[t_ms=    64638] PUB              topic=sis234/grupo1/distance payload={"seq":152,"cm":85.5}
+[t_ms=    65037] PUB              topic=sis234/grupo1/distance payload={"seq":153,"cm":86.8}
+[t_ms=    65438] PUB              topic=sis234/grupo1/distance payload={"seq":154,"cm":88.2}
+[t_ms=    65855] PUB              topic=sis234/grupo1/distance payload={"seq":155,"cm":null}
+[t_ms=    66255] PUB              topic=sis234/grupo1/distance payload={"seq":156,"cm":null}
+[t_ms=    66655] PUB              topic=sis234/grupo1/distance payload={"seq":157,"cm":null}
+[t_ms=    67055] PUB              topic=sis234/grupo1/distance payload={"seq":158,"cm":null}
+[t_ms=    67455] PUB              topic=sis234/grupo1/distance payload={"seq":159,"cm":null}
+[t_ms=    67855] PUB              topic=sis234/grupo1/distance payload={"seq":160,"cm":null}
+[t_ms=    68255] PUB              topic=sis234/grupo1/distance payload={"seq":161,"cm":null}
+[t_ms=    68655] PUB              topic=sis234/grupo1/distance payload={"seq":162,"cm":null}
+[t_ms=    69055] PUB              topic=sis234/grupo1/distance payload={"seq":163,"cm":null}
+[t_ms=    69455] PUB              topic=sis234/grupo1/distance payload={"seq":164,"cm":null}
+[t_ms=    69855] PUB              topic=sis234/grupo1/distance payload={"seq":165,"cm":null}
+[t_ms=    70257] PUB              topic=sis234/grupo1/distance payload={"seq":166,"cm":null}
+[t_ms=    70657] PUB              topic=sis234/grupo1/distance payload={"seq":167,"cm":null}
+[t_ms=    71055] PUB              topic=sis234/grupo1/distance payload={"seq":168,"cm":null}
+[t_ms=    71455] PUB              topic=sis234/grupo1/distance payload={"seq":169,"cm":null}
+[t_ms=    71855] PUB              topic=sis234/grupo1/distance payload={"seq":170,"cm":null}
+[t_ms=    72255] PUB              topic=sis234/grupo1/distance payload={"seq":171,"cm":null}
+[t_ms=    72655] PUB              topic=sis234/grupo1/distance payload={"seq":172,"cm":null}
+[t_ms=    73055] PUB              topic=sis234/grupo1/distance payload={"seq":173,"cm":null}
+[t_ms=    73455] PUB              topic=sis234/grupo1/distance payload={"seq":174,"cm":null}
+[t_ms=    73855] PUB              topic=sis234/grupo1/distance payload={"seq":175,"cm":null}
+[t_ms=    74255] PUB              topic=sis234/grupo1/distance payload={"seq":176,"cm":null}
+[t_ms=    74655] PUB              topic=sis234/grupo1/distance payload={"seq":177,"cm":null}
+[t_ms=    75055] PUB              topic=sis234/grupo1/distance payload={"seq":178,"cm":null}
+[t_ms=    75455] PUB              topic=sis234/grupo1/distance payload={"seq":179,"cm":null}
+[t_ms=    75855] PUB              topic=sis234/grupo1/distance payload={"seq":180,"cm":null}
+[t_ms=    76255] PUB              topic=sis234/grupo1/distance payload={"seq":181,"cm":null}
+[t_ms=    76655] PUB              topic=sis234/grupo1/distance payload={"seq":182,"cm":null}
+[t_ms=    77055] PUB              topic=sis234/grupo1/distance payload={"seq":183,"cm":null}
+[t_ms=    77455] PUB              topic=sis234/grupo1/distance payload={"seq":184,"cm":null}
+[t_ms=    77855] PUB              topic=sis234/grupo1/distance payload={"seq":185,"cm":null}
+[t_ms=    78255] PUB              topic=sis234/grupo1/distance payload={"seq":186,"cm":null}
+[t_ms=    78655] PUB              topic=sis234/grupo1/distance payload={"seq":187,"cm":null}
+[t_ms=    79055] PUB              topic=sis234/grupo1/distance payload={"seq":188,"cm":null}
+[t_ms=    79455] PUB              topic=sis234/grupo1/distance payload={"seq":189,"cm":null}
+[t_ms=    79855] PUB              topic=sis234/grupo1/distance payload={"seq":190,"cm":null}
+[t_ms=    80255] PUB              topic=sis234/grupo1/distance payload={"seq":191,"cm":null}
+[t_ms=    80655] PUB              topic=sis234/grupo1/distance payload={"seq":192,"cm":null}
+[t_ms=    81055] PUB              topic=sis234/grupo1/distance payload={"seq":193,"cm":null}
+[t_ms=    81455] PUB              topic=sis234/grupo1/distance payload={"seq":194,"cm":null}
+[t_ms=    81855] PUB              topic=sis234/grupo1/distance payload={"seq":195,"cm":null}
+[t_ms=    82255] PUB              topic=sis234/grupo1/distance payload={"seq":196,"cm":null}
+[t_ms=    82655] PUB              topic=sis234/grupo1/distance payload={"seq":197,"cm":null}
+[t_ms=    83055] PUB              topic=sis234/grupo1/distance payload={"seq":198,"cm":null}
+[t_ms=    83457] PUB              topic=sis234/grupo1/distance payload={"seq":199,"cm":null}
+[t_ms=    83855] PUB              topic=sis234/grupo1/distance payload={"seq":200,"cm":null}
+[t_ms=    84255] PUB              topic=sis234/grupo1/distance payload={"seq":201,"cm":null}
+[t_ms=    84655] PUB              topic=sis234/grupo1/distance payload={"seq":202,"cm":null}
+[t_ms=    85055] PUB              topic=sis234/grupo1/distance payload={"seq":203,"cm":null}
+[t_ms=    85455] PUB              topic=sis234/grupo1/distance payload={"seq":204,"cm":null}
+[t_ms=    85855] PUB              topic=sis234/grupo1/distance payload={"seq":205,"cm":null}
+[t_ms=    86255] PUB              topic=sis234/grupo1/distance payload={"seq":206,"cm":null}
+[t_ms=    86655] PUB              topic=sis234/grupo1/distance payload={"seq":207,"cm":null}
+[t_ms=    87055] PUB              topic=sis234/grupo1/distance payload={"seq":208,"cm":null}
+[t_ms=    87455] PUB              topic=sis234/grupo1/distance payload={"seq":209,"cm":null}
+[t_ms=    87855] PUB              topic=sis234/grupo1/distance payload={"seq":210,"cm":null}
+[t_ms=    88255] PUB              topic=sis234/grupo1/distance payload={"seq":211,"cm":null}
+[t_ms=    88655] PUB              topic=sis234/grupo1/distance payload={"seq":212,"cm":null}
+[t_ms=    89055] PUB              topic=sis234/grupo1/distance payload={"seq":213,"cm":null}
+[t_ms=    89455] PUB              topic=sis234/grupo1/distance payload={"seq":214,"cm":null}
+[t_ms=    89855] PUB              topic=sis234/grupo1/distance payload={"seq":215,"cm":null}
+[t_ms=    90255] PUB              topic=sis234/grupo1/distance payload={"seq":216,"cm":null}
+[t_ms=    90655] PUB              topic=sis234/grupo1/distance payload={"seq":217,"cm":null}
+[t_ms=    91055] PUB              topic=sis234/grupo1/distance payload={"seq":218,"cm":null}
+[t_ms=    91457] PUB              topic=sis234/grupo1/distance payload={"seq":219,"cm":null}
+[t_ms=    91857] PUB              topic=sis234/grupo1/distance payload={"seq":220,"cm":null}
+[t_ms=    92257] PUB              topic=sis234/grupo1/distance payload={"seq":221,"cm":null}
+[t_ms=    92658] PUB              topic=sis234/grupo1/distance payload={"seq":222,"cm":null}
+[t_ms=    93055] PUB              topic=sis234/grupo1/distance payload={"seq":223,"cm":null}
+[t_ms=    93455] PUB              topic=sis234/grupo1/distance payload={"seq":224,"cm":null}
+[t_ms=    93855] PUB              topic=sis234/grupo1/distance payload={"seq":225,"cm":null}
+[t_ms=    94255] PUB              topic=sis234/grupo1/distance payload={"seq":226,"cm":null}
+[t_ms=    94655] PUB              topic=sis234/grupo1/distance payload={"seq":227,"cm":null}
+[t_ms=    95057] PUB              topic=sis234/grupo1/distance payload={"seq":228,"cm":null}
+[t_ms=    95457] PUB              topic=sis234/grupo1/distance payload={"seq":229,"cm":null}
+[t_ms=    95857] PUB              topic=sis234/grupo1/distance payload={"seq":230,"cm":null}
+[t_ms=    96255] PUB              topic=sis234/grupo1/distance payload={"seq":231,"cm":null}
+[t_ms=    96655] PUB              topic=sis234/grupo1/distance payload={"seq":232,"cm":null}
+[t_ms=    97038] PUB              topic=sis234/grupo1/distance payload={"seq":233,"cm":88.3}
+[t_ms=    97455] PUB              topic=sis234/grupo1/distance payload={"seq":234,"cm":null}
+[t_ms=    97857] PUB              topic=sis234/grupo1/distance payload={"seq":235,"cm":null}
+[t_ms=    98257] PUB              topic=sis234/grupo1/distance payload={"seq":236,"cm":null}
+[t_ms=    98655] PUB              topic=sis234/grupo1/distance payload={"seq":237,"cm":null}
+[t_ms=    99057] PUB              topic=sis234/grupo1/distance payload={"seq":238,"cm":null}
+[t_ms=    99457] PUB              topic=sis234/grupo1/distance payload={"seq":239,"cm":null}
+[t_ms=    99838] PUB              topic=sis234/grupo1/distance payload={"seq":240,"cm":87.3}
+[t_ms=   100255] PUB              topic=sis234/grupo1/distance payload={"seq":241,"cm":null}
+[t_ms=   100655] PUB              topic=sis234/grupo1/distance payload={"seq":242,"cm":null}
+[t_ms=   101038] PUB              topic=sis234/grupo1/distance payload={"seq":243,"cm":88.8}
+[t_ms=   101455] PUB              topic=sis234/grupo1/distance payload={"seq":244,"cm":null}
+[t_ms=   101855] PUB              topic=sis234/grupo1/distance payload={"seq":245,"cm":null}
+[t_ms=   102255] PUB              topic=sis234/grupo1/distance payload={"seq":246,"cm":null}
+[t_ms=   102655] PUB              topic=sis234/grupo1/distance payload={"seq":247,"cm":null}
+[t_ms=   103055] PUB              topic=sis234/grupo1/distance payload={"seq":248,"cm":null}
+[t_ms=   103455] PUB              topic=sis234/grupo1/distance payload={"seq":249,"cm":null}
+[t_ms=   103855] PUB              topic=sis234/grupo1/distance payload={"seq":250,"cm":null}
+[t_ms=   104255] PUB              topic=sis234/grupo1/distance payload={"seq":251,"cm":null}
+[t_ms=   104655] PUB              topic=sis234/grupo1/distance payload={"seq":252,"cm":null}
+[t_ms=   105055] PUB              topic=sis234/grupo1/distance payload={"seq":253,"cm":null}
+[t_ms=   105455] PUB              topic=sis234/grupo1/distance payload={"seq":254,"cm":null}
+[t_ms=   105857] PUB              topic=sis234/grupo1/distance payload={"seq":255,"cm":null}
+[t_ms=   106255] PUB              topic=sis234/grupo1/distance payload={"seq":256,"cm":null}
+[t_ms=   106655] PUB              topic=sis234/grupo1/distance payload={"seq":257,"cm":null}
+[t_ms=   107055] PUB              topic=sis234/grupo1/distance payload={"seq":258,"cm":null}
+[t_ms=   107455] PUB              topic=sis234/grupo1/distance payload={"seq":259,"cm":null}
+[t_ms=   107855] PUB              topic=sis234/grupo1/distance payload={"seq":260,"cm":null}
+[t_ms=   108255] PUB              topic=sis234/grupo1/distance payload={"seq":261,"cm":null}
+[t_ms=   108655] PUB              topic=sis234/grupo1/distance payload={"seq":262,"cm":null}
+[t_ms=   109055] PUB              topic=sis234/grupo1/distance payload={"seq":263,"cm":null}
+[t_ms=   109455] PUB              topic=sis234/grupo1/distance payload={"seq":264,"cm":null}
+[t_ms=   109855] PUB              topic=sis234/grupo1/distance payload={"seq":265,"cm":null}
+[t_ms=   110255] PUB              topic=sis234/grupo1/distance payload={"seq":266,"cm":null}
+[t_ms=   110655] PUB              topic=sis234/grupo1/distance payload={"seq":267,"cm":null}
+[t_ms=   111055] PUB              topic=sis234/grupo1/distance payload={"seq":268,"cm":null}
+[t_ms=   111455] PUB              topic=sis234/grupo1/distance payload={"seq":269,"cm":null}
+[t_ms=   111855] PUB              topic=sis234/grupo1/distance payload={"seq":270,"cm":null}
+[t_ms=   112255] PUB              topic=sis234/grupo1/distance payload={"seq":271,"cm":null}
+[t_ms=   112655] PUB              topic=sis234/grupo1/distance payload={"seq":272,"cm":null}
+[t_ms=   113055] PUB              topic=sis234/grupo1/distance payload={"seq":273,"cm":null}
+[t_ms=   113455] PUB              topic=sis234/grupo1/distance payload={"seq":274,"cm":null}
+[t_ms=   113855] PUB              topic=sis234/grupo1/distance payload={"seq":275,"cm":null}
+[t_ms=   114255] PUB              topic=sis234/grupo1/distance payload={"seq":276,"cm":null}
+[t_ms=   114655] PUB              topic=sis234/grupo1/distance payload={"seq":277,"cm":null}
+[t_ms=   115055] PUB              topic=sis234/grupo1/distance payload={"seq":278,"cm":null}
+[t_ms=   115455] PUB              topic=sis234/grupo1/distance payload={"seq":279,"cm":null}
+[t_ms=   115855] PUB              topic=sis234/grupo1/distance payload={"seq":280,"cm":null}
+[t_ms=   116255] PUB              topic=sis234/grupo1/distance payload={"seq":281,"cm":null}
+[t_ms=   116655] PUB              topic=sis234/grupo1/distance payload={"seq":282,"cm":null}
+[t_ms=   117055] PUB              topic=sis234/grupo1/distance payload={"seq":283,"cm":null}
+[t_ms=   117455] PUB              topic=sis234/grupo1/distance payload={"seq":284,"cm":null}
+[t_ms=   117857] PUB              topic=sis234/grupo1/distance payload={"seq":285,"cm":null}
+[t_ms=   118257] PUB              topic=sis234/grupo1/distance payload={"seq":286,"cm":null}
+[t_ms=   118639] PUB              topic=sis234/grupo1/distance payload={"seq":287,"cm":84.2}
+[t_ms=   119057] PUB              topic=sis234/grupo1/distance payload={"seq":288,"cm":null}
+[t_ms=   119455] PUB              topic=sis234/grupo1/distance payload={"seq":289,"cm":null}
+[t_ms=   119855] PUB              topic=sis234/grupo1/distance payload={"seq":290,"cm":null}
+[t_ms=   120255] PUB              topic=sis234/grupo1/distance payload={"seq":291,"cm":null}
+[t_ms=   120655] PUB              topic=sis234/grupo1/distance payload={"seq":292,"cm":null}
+[t_ms=   121038] PUB              topic=sis234/grupo1/distance payload={"seq":293,"cm":88.8}
+[t_ms=   121455] PUB              topic=sis234/grupo1/distance payload={"seq":294,"cm":null}
+[t_ms=   121855] PUB              topic=sis234/grupo1/distance payload={"seq":295,"cm":null}
+[t_ms=   122238] PUB              topic=sis234/grupo1/distance payload={"seq":296,"cm":88.8}
+[t_ms=   122655] PUB              topic=sis234/grupo1/distance payload={"seq":297,"cm":null}
+[t_ms=   123037] PUB              topic=sis234/grupo1/distance payload={"seq":298,"cm":88.4}
+[t_ms=   123455] PUB              topic=sis234/grupo1/distance payload={"seq":299,"cm":null}
+[t_ms=   123855] PUB              topic=sis234/grupo1/distance payload={"seq":300,"cm":null}
+[t_ms=   124255] PUB              topic=sis234/grupo1/distance payload={"seq":301,"cm":null}
+[t_ms=   124655] PUB              topic=sis234/grupo1/distance payload={"seq":302,"cm":null}
+[t_ms=   125037] PUB              topic=sis234/grupo1/distance payload={"seq":303,"cm":85.4}
+[t_ms=   125437] PUB              topic=sis234/grupo1/distance payload={"seq":304,"cm":87.4}
+[t_ms=   125837] PUB              topic=sis234/grupo1/distance payload={"seq":305,"cm":73.0}
+[t_ms=   126234] PUB              topic=sis234/grupo1/distance payload={"seq":306,"cm":21.1}
+[t_ms=   126634] PUB              topic=sis234/grupo1/distance payload={"seq":307,"cm":20.1}
+[t_ms=   127057] PUB              topic=sis234/grupo1/distance payload={"seq":308,"cm":null}
+[t_ms=   127436] PUB              topic=sis234/grupo1/distance payload={"seq":309,"cm":20.4}
+[t_ms=   127855] PUB              topic=sis234/grupo1/distance payload={"seq":310,"cm":null}
+[t_ms=   128255] PUB              topic=sis234/grupo1/distance payload={"seq":311,"cm":null}
+[t_ms=   128633] PUB              topic=sis234/grupo1/distance payload={"seq":312,"cm":18.8}
+[t_ms=   129033] PUB              topic=sis234/grupo1/distance payload={"seq":313,"cm":19.1}
+[t_ms=   129434] PUB              topic=sis234/grupo1/distance payload={"seq":314,"cm":23.2}
+[t_ms=   129834] PUB              topic=sis234/grupo1/distance payload={"seq":315,"cm":22.3}
+[t_ms=   130255] PUB              topic=sis234/grupo1/distance payload={"seq":316,"cm":null}
+[t_ms=   130655] PUB              topic=sis234/grupo1/distance payload={"seq":317,"cm":null}
+[t_ms=   131055] PUB              topic=sis234/grupo1/distance payload={"seq":318,"cm":null}
+[t_ms=   131455] PUB              topic=sis234/grupo1/distance payload={"seq":319,"cm":null}
+[t_ms=   131834] PUB              topic=sis234/grupo1/distance payload={"seq":320,"cm":22.6}
+[t_ms=   132255] PUB              topic=sis234/grupo1/distance payload={"seq":321,"cm":null}
+[t_ms=   132655] PUB              topic=sis234/grupo1/distance payload={"seq":322,"cm":null}
+[t_ms=   133034] PUB              topic=sis234/grupo1/distance payload={"seq":323,"cm":22.6}
+[t_ms=   133455] PUB              topic=sis234/grupo1/distance payload={"seq":324,"cm":null}
+[t_ms=   133834] PUB              topic=sis234/grupo1/distance payload={"seq":325,"cm":22.9}
+[t_ms=   134233] PUB              topic=sis234/grupo1/distance payload={"seq":326,"cm":22.4}
+[t_ms=   134634] PUB              topic=sis234/grupo1/distance payload={"seq":327,"cm":37.4}
+[t_ms=   135035] PUB              topic=sis234/grupo1/distance payload={"seq":328,"cm":32.9}
+[t_ms=   135435] PUB              topic=sis234/grupo1/distance payload={"seq":329,"cm":36.9}
+[t_ms=   135835] PUB              topic=sis234/grupo1/distance payload={"seq":330,"cm":37.4}
+[t_ms=   136235] PUB              topic=sis234/grupo1/distance payload={"seq":331,"cm":36.9}
+[t_ms=   136635] PUB              topic=sis234/grupo1/distance payload={"seq":332,"cm":37.4}
+[t_ms=   137034] PUB              topic=sis234/grupo1/distance payload={"seq":333,"cm":33.1}
+[t_ms=   137455] PUB              topic=sis234/grupo1/distance payload={"seq":334,"cm":null}
+[t_ms=   137836] PUB              topic=sis234/grupo1/distance payload={"seq":335,"cm":30.3}
+[t_ms=   138235] PUB              topic=sis234/grupo1/distance payload={"seq":336,"cm":35.7}
+[t_ms=   138634] PUB              topic=sis234/grupo1/distance payload={"seq":337,"cm":31.8}
+[t_ms=   139055] PUB              topic=sis234/grupo1/distance payload={"seq":338,"cm":null}
+[t_ms=   139434] PUB              topic=sis234/grupo1/distance payload={"seq":339,"cm":29.0}
+[t_ms=   139834] PUB              topic=sis234/grupo1/distance payload={"seq":340,"cm":30.8}
+[t_ms=   140234] PUB              topic=sis234/grupo1/distance payload={"seq":341,"cm":32.1}
+[t_ms=   140655] PUB              topic=sis234/grupo1/distance payload={"seq":342,"cm":null}
+[t_ms=   141034] PUB              topic=sis234/grupo1/distance payload={"seq":343,"cm":30.5}
+[t_ms=   141434] PUB              topic=sis234/grupo1/distance payload={"seq":344,"cm":29.5}
+[t_ms=   141834] PUB              topic=sis234/grupo1/distance payload={"seq":345,"cm":31.1}
+[t_ms=   142235] PUB              topic=sis234/grupo1/distance payload={"seq":346,"cm":36.9}
+[t_ms=   142634] PUB              topic=sis234/grupo1/distance payload={"seq":347,"cm":29.0}
+[t_ms=   143034] PUB              topic=sis234/grupo1/distance payload={"seq":348,"cm":29.5}
+[t_ms=   143455] PUB              topic=sis234/grupo1/distance payload={"seq":349,"cm":null}
+[t_ms=   143855] PUB              topic=sis234/grupo1/distance payload={"seq":350,"cm":null}
+[t_ms=   144233] PUB              topic=sis234/grupo1/distance payload={"seq":351,"cm":16.6}
+[t_ms=   144655] PUB              topic=sis234/grupo1/distance payload={"seq":352,"cm":null}
+[t_ms=   145057] PUB              topic=sis234/grupo1/distance payload={"seq":353,"cm":null}
+[t_ms=   145457] PUB              topic=sis234/grupo1/distance payload={"seq":354,"cm":null}
+[t_ms=   145855] PUB              topic=sis234/grupo1/distance payload={"seq":355,"cm":null}
+[t_ms=   146255] PUB              topic=sis234/grupo1/distance payload={"seq":356,"cm":null}
+[t_ms=   146655] PUB              topic=sis234/grupo1/distance payload={"seq":357,"cm":null}
+[t_ms=   147055] PUB              topic=sis234/grupo1/distance payload={"seq":358,"cm":null}
+[t_ms=   147455] PUB              topic=sis234/grupo1/distance payload={"seq":359,"cm":null}
+[t_ms=   147855] PUB              topic=sis234/grupo1/distance payload={"seq":360,"cm":null}
+[t_ms=   148255] PUB              topic=sis234/grupo1/distance payload={"seq":361,"cm":null}
+[t_ms=   148657] PUB              topic=sis234/grupo1/distance payload={"seq":362,"cm":null}
+[t_ms=   149057] PUB              topic=sis234/grupo1/distance payload={"seq":363,"cm":null}
+[t_ms=   149455] PUB              topic=sis234/grupo1/distance payload={"seq":364,"cm":null}
+[t_ms=   149855] PUB              topic=sis234/grupo1/distance payload={"seq":365,"cm":null}
+[t_ms=   150255] PUB              topic=sis234/grupo1/distance payload={"seq":366,"cm":null}
+[t_ms=   150655] PUB              topic=sis234/grupo1/distance payload={"seq":367,"cm":null}
+[t_ms=   151055] PUB              topic=sis234/grupo1/distance payload={"seq":368,"cm":null}
+[t_ms=   151457] PUB              topic=sis234/grupo1/distance payload={"seq":369,"cm":null}
+[t_ms=   151857] PUB              topic=sis234/grupo1/distance payload={"seq":370,"cm":null}
+[t_ms=   152255] PUB              topic=sis234/grupo1/distance payload={"seq":371,"cm":null}
+[t_ms=   152655] PUB              topic=sis234/grupo1/distance payload={"seq":372,"cm":null}
+[t_ms=   153055] PUB              topic=sis234/grupo1/distance payload={"seq":373,"cm":null}
+[t_ms=   153455] PUB              topic=sis234/grupo1/distance payload={"seq":374,"cm":null}
+[t_ms=   153855] PUB              topic=sis234/grupo1/distance payload={"seq":375,"cm":null}
+[t_ms=   154255] PUB              topic=sis234/grupo1/distance payload={"seq":376,"cm":null}
+[t_ms=   154655] PUB              topic=sis234/grupo1/distance payload={"seq":377,"cm":null}
+[t_ms=   155055] PUB              topic=sis234/grupo1/distance payload={"seq":378,"cm":null}
+[t_ms=   155455] PUB              topic=sis234/grupo1/distance payload={"seq":379,"cm":null}
+[t_ms=   155855] PUB              topic=sis234/grupo1/distance payload={"seq":380,"cm":null}
+[t_ms=   156255] PUB              topic=sis234/grupo1/distance payload={"seq":381,"cm":null}
+[t_ms=   156655] PUB              topic=sis234/grupo1/distance payload={"seq":382,"cm":null}
+[t_ms=   157055] PUB              topic=sis234/grupo1/distance payload={"seq":383,"cm":null}
+[t_ms=   157457] PUB              topic=sis234/grupo1/distance payload={"seq":384,"cm":null}
+[t_ms=   157857] PUB              topic=sis234/grupo1/distance payload={"seq":385,"cm":null}
+[t_ms=   158255] PUB              topic=sis234/grupo1/distance payload={"seq":386,"cm":null}
+[t_ms=   158655] PUB              topic=sis234/grupo1/distance payload={"seq":387,"cm":null}
+[t_ms=   159057] PUB              topic=sis234/grupo1/distance payload={"seq":388,"cm":null}
+[t_ms=   159455] PUB              topic=sis234/grupo1/distance payload={"seq":389,"cm":null}
+[t_ms=   159857] PUB              topic=sis234/grupo1/distance payload={"seq":390,"cm":null}
+[t_ms=   160257] PUB              topic=sis234/grupo1/distance payload={"seq":391,"cm":null}
+[t_ms=   160655] PUB              topic=sis234/grupo1/distance payload={"seq":392,"cm":null}
+[t_ms=   161057] PUB              topic=sis234/grupo1/distance payload={"seq":393,"cm":null}
+[t_ms=   161457] PUB              topic=sis234/grupo1/distance payload={"seq":394,"cm":null}
+[t_ms=   161857] PUB              topic=sis234/grupo1/distance payload={"seq":395,"cm":null}
+[t_ms=   162257] PUB              topic=sis234/grupo1/distance payload={"seq":396,"cm":null}
+[t_ms=   162654] PUB              topic=sis234/grupo1/distance payload={"seq":397,"cm":null}
+[t_ms=   163055] PUB              topic=sis234/grupo1/distance payload={"seq":398,"cm":null}
+[t_ms=   163455] PUB              topic=sis234/grupo1/distance payload={"seq":399,"cm":null}
+[t_ms=   163855] PUB              topic=sis234/grupo1/distance payload={"seq":400,"cm":null}
+[t_ms=   164255] PUB              topic=sis234/grupo1/distance payload={"seq":401,"cm":null}
+[t_ms=   164655] PUB              topic=sis234/grupo1/distance payload={"seq":402,"cm":null}
+[t_ms=   165055] PUB              topic=sis234/grupo1/distance payload={"seq":403,"cm":null}
+[t_ms=   165457] PUB              topic=sis234/grupo1/distance payload={"seq":404,"cm":null}
+[t_ms=   165857] PUB              topic=sis234/grupo1/distance payload={"seq":405,"cm":null}
+[t_ms=   166255] PUB              topic=sis234/grupo1/distance payload={"seq":406,"cm":null}
+[t_ms=   166655] PUB              topic=sis234/grupo1/distance payload={"seq":407,"cm":null}
+[t_ms=   167057] PUB              topic=sis234/grupo1/distance payload={"seq":408,"cm":null}
+[t_ms=   167437] PUB              topic=sis234/grupo1/distance payload={"seq":409,"cm":37.4}
+[t_ms=   167834] PUB              topic=sis234/grupo1/distance payload={"seq":410,"cm":22.0}
+[t_ms=   168234] PUB              topic=sis234/grupo1/distance payload={"seq":411,"cm":22.6}
+[t_ms=   168634] PUB              topic=sis234/grupo1/distance payload={"seq":412,"cm":22.9}
+[t_ms=   169034] PUB              topic=sis234/grupo1/distance payload={"seq":413,"cm":21.7}
+[t_ms=   169434] PUB              topic=sis234/grupo1/distance payload={"seq":414,"cm":24.1}
+[t_ms=   169855] PUB              topic=sis234/grupo1/distance payload={"seq":415,"cm":null}
+[t_ms=   170236] PUB              topic=sis234/grupo1/distance payload={"seq":416,"cm":23.2}
+[t_ms=   170637] PUB              topic=sis234/grupo1/distance payload={"seq":417,"cm":37.4}
+[t_ms=   171057] PUB              topic=sis234/grupo1/distance payload={"seq":418,"cm":null}
+[t_ms=   171457] PUB              topic=sis234/grupo1/distance payload={"seq":419,"cm":null}
+[t_ms=   171857] PUB              topic=sis234/grupo1/distance payload={"seq":420,"cm":null}
+[t_ms=   172257] PUB              topic=sis234/grupo1/distance payload={"seq":421,"cm":null}
+[t_ms=   172657] PUB              topic=sis234/grupo1/distance payload={"seq":422,"cm":null}
+[t_ms=   173057] PUB              topic=sis234/grupo1/distance payload={"seq":423,"cm":null}
+[t_ms=   173457] PUB              topic=sis234/grupo1/distance payload={"seq":424,"cm":null}
+[t_ms=   173857] PUB              topic=sis234/grupo1/distance payload={"seq":425,"cm":null}
+[t_ms=   174257] PUB              topic=sis234/grupo1/distance payload={"seq":426,"cm":null}
+[t_ms=   174657] PUB              topic=sis234/grupo1/distance payload={"seq":427,"cm":null}
+[t_ms=   175057] PUB              topic=sis234/grupo1/distance payload={"seq":428,"cm":null}
+[t_ms=   175457] PUB              topic=sis234/grupo1/distance payload={"seq":429,"cm":null}
+[t_ms=   175857] PUB              topic=sis234/grupo1/distance payload={"seq":430,"cm":null}
+[t_ms=   176257] PUB              topic=sis234/grupo1/distance payload={"seq":431,"cm":null}
+[t_ms=   176657] PUB              topic=sis234/grupo1/distance payload={"seq":432,"cm":null}
+[t_ms=   177057] PUB              topic=sis234/grupo1/distance payload={"seq":433,"cm":null}
+[t_ms=   177457] PUB              topic=sis234/grupo1/distance payload={"seq":434,"cm":null}
+[t_ms=   177857] PUB              topic=sis234/grupo1/distance payload={"seq":435,"cm":null}
+[t_ms=   178258] PUB              topic=sis234/grupo1/distance payload={"seq":436,"cm":null}
+[t_ms=   178657] PUB              topic=sis234/grupo1/distance payload={"seq":437,"cm":null}
+[t_ms=   179055] PUB              topic=sis234/grupo1/distance payload={"seq":438,"cm":null}
+[t_ms=   179455] PUB              topic=sis234/grupo1/distance payload={"seq":439,"cm":null}
+[t_ms=   179855] PUB              topic=sis234/grupo1/distance payload={"seq":440,"cm":null}
+[t_ms=   180257] PUB              topic=sis234/grupo1/distance payload={"seq":441,"cm":null}
+[t_ms=   180657] PUB              topic=sis234/grupo1/distance payload={"seq":442,"cm":null}
+[t_ms=   181057] PUB              topic=sis234/grupo1/distance payload={"seq":443,"cm":null}
+[t_ms=   181457] PUB              topic=sis234/grupo1/distance payload={"seq":444,"cm":null}
+[t_ms=   181857] PUB              topic=sis234/grupo1/distance payload={"seq":445,"cm":null}
+[t_ms=   182257] PUB              topic=sis234/grupo1/distance payload={"seq":446,"cm":null}
+[t_ms=   182658] PUB              topic=sis234/grupo1/distance payload={"seq":447,"cm":null}
+[t_ms=   183057] PUB              topic=sis234/grupo1/distance payload={"seq":448,"cm":null}
+[t_ms=   183457] PUB              topic=sis234/grupo1/distance payload={"seq":449,"cm":null}
+[t_ms=   183857] PUB              topic=sis234/grupo1/distance payload={"seq":450,"cm":null}
+[t_ms=   184257] PUB              topic=sis234/grupo1/distance payload={"seq":451,"cm":null}
+[t_ms=   184657] PUB              topic=sis234/grupo1/distance payload={"seq":452,"cm":null}
+[t_ms=   185057] PUB              topic=sis234/grupo1/distance payload={"seq":453,"cm":null}
+[t_ms=   185457] PUB              topic=sis234/grupo1/distance payload={"seq":454,"cm":null}
+[t_ms=   185857] PUB              topic=sis234/grupo1/distance payload={"seq":455,"cm":null}
+[t_ms=   186257] PUB              topic=sis234/grupo1/distance payload={"seq":456,"cm":null}
+[t_ms=   186657] PUB              topic=sis234/grupo1/distance payload={"seq":457,"cm":null}
+[t_ms=   187057] PUB              topic=sis234/grupo1/distance payload={"seq":458,"cm":null}
+[t_ms=   187457] PUB              topic=sis234/grupo1/distance payload={"seq":459,"cm":null}
+[t_ms=   187857] PUB              topic=sis234/grupo1/distance payload={"seq":460,"cm":null}
+[t_ms=   188257] PUB              topic=sis234/grupo1/distance payload={"seq":461,"cm":null}
+[t_ms=   188657] PUB              topic=sis234/grupo1/distance payload={"seq":462,"cm":null}
+[t_ms=   189055] PUB              topic=sis234/grupo1/distance payload={"seq":463,"cm":null}
+[t_ms=   189457] PUB              topic=sis234/grupo1/distance payload={"seq":464,"cm":null}
+[t_ms=   189857] PUB              topic=sis234/grupo1/distance payload={"seq":465,"cm":null}
+[t_ms=   190257] PUB              topic=sis234/grupo1/distance payload={"seq":466,"cm":null}
+[t_ms=   190657] PUB              topic=sis234/grupo1/distance payload={"seq":467,"cm":null}
+[t_ms=   191057] PUB              topic=sis234/grupo1/distance payload={"seq":468,"cm":null}
+[t_ms=   191457] PUB              topic=sis234/grupo1/distance payload={"seq":469,"cm":null}
+[t_ms=   191857] PUB              topic=sis234/grupo1/distance payload={"seq":470,"cm":null}
+[t_ms=   192257] PUB              topic=sis234/grupo1/distance payload={"seq":471,"cm":null}
+[t_ms=   192657] PUB              topic=sis234/grupo1/distance payload={"seq":472,"cm":null}
+[t_ms=   193057] PUB              topic=sis234/grupo1/distance payload={"seq":473,"cm":null}
+[t_ms=   193457] PUB              topic=sis234/grupo1/distance payload={"seq":474,"cm":null}
+[t_ms=   193857] PUB              topic=sis234/grupo1/distance payload={"seq":475,"cm":null}
+[t_ms=   194257] PUB              topic=sis234/grupo1/distance payload={"seq":476,"cm":null}
+[t_ms=   194655] PUB              topic=sis234/grupo1/distance payload={"seq":477,"cm":null}
+[t_ms=   195055] PUB              topic=sis234/grupo1/distance payload={"seq":478,"cm":null}
+[t_ms=   195316] MQTT_LOST        state=-3
+[t_ms=   195317] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[196321][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   196328] MQTT_RETRY       state=-2 took_ms=1010
+[t_ms=   196354] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":479,"cm":null} reason=not_connected
+[t_ms=   196754] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":480,"cm":null} reason=not_connected
+[t_ms=   197154] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":481,"cm":null} reason=not_connected
+[t_ms=   197554] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":482,"cm":null} reason=not_connected
+[t_ms=   197954] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":483,"cm":null} reason=not_connected
+[t_ms=   198328] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[198328][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   198341] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   198366] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":484,"cm":null} reason=not_connected
+[t_ms=   198766] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":485,"cm":null} reason=not_connected
+[t_ms=   199166] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":486,"cm":null} reason=not_connected
+[t_ms=   199566] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":487,"cm":null} reason=not_connected
+[t_ms=   199966] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":488,"cm":null} reason=not_connected
+[t_ms=   200341] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[200341][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   200354] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   200379] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":489,"cm":null} reason=not_connected
+[t_ms=   200779] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":490,"cm":null} reason=not_connected
+[t_ms=   201179] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":491,"cm":null} reason=not_connected
+[t_ms=   201579] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":492,"cm":null} reason=not_connected
+[t_ms=   201979] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":493,"cm":null} reason=not_connected
+[t_ms=   202354] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[202354][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   202367] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   202392] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":494,"cm":null} reason=not_connected
+[t_ms=   202792] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":495,"cm":null} reason=not_connected
+[t_ms=   203192] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":496,"cm":null} reason=not_connected
+[t_ms=   203592] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":497,"cm":null} reason=not_connected
+[t_ms=   203992] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":498,"cm":null} reason=not_connected
+[t_ms=   204367] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[204367][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   204380] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   204405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":499,"cm":null} reason=not_connected
+[t_ms=   204805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":500,"cm":null} reason=not_connected
+[t_ms=   205205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":501,"cm":null} reason=not_connected
+[t_ms=   205605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":502,"cm":null} reason=not_connected
+[t_ms=   206005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":503,"cm":null} reason=not_connected
+[t_ms=   206380] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[206380][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   206393] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   206418] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":504,"cm":null} reason=not_connected
+[t_ms=   206805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":505,"cm":null} reason=not_connected
+[t_ms=   207205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":506,"cm":null} reason=not_connected
+[t_ms=   207605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":507,"cm":null} reason=not_connected
+[t_ms=   208005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":508,"cm":null} reason=not_connected
+[t_ms=   208393] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[208393][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   208406] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   208406] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":509,"cm":null} reason=not_connected
+[t_ms=   208805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":510,"cm":null} reason=not_connected
+[t_ms=   209205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":511,"cm":null} reason=not_connected
+[t_ms=   209605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":512,"cm":null} reason=not_connected
+[t_ms=   210005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":513,"cm":null} reason=not_connected
+[t_ms=   210405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":514,"cm":null} reason=not_connected
+[t_ms=   210406] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[210416][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   210427] MQTT_RETRY       state=-2 took_ms=11
+[t_ms=   210805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":515,"cm":null} reason=not_connected
+[t_ms=   211205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":516,"cm":null} reason=not_connected
+[t_ms=   211605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":517,"cm":null} reason=not_connected
+[t_ms=   212005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":518,"cm":null} reason=not_connected
+[t_ms=   212405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":519,"cm":null} reason=not_connected
+[t_ms=   212428] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[212428][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   212441] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   212805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":520,"cm":null} reason=not_connected
+[t_ms=   213205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":521,"cm":null} reason=not_connected
+[t_ms=   213605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":522,"cm":null} reason=not_connected
+[t_ms=   214005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":523,"cm":null} reason=not_connected
+[t_ms=   214405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":524,"cm":null} reason=not_connected
+[t_ms=   214441] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[214441][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   214454] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   214805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":525,"cm":null} reason=not_connected
+[t_ms=   215205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":526,"cm":null} reason=not_connected
+[t_ms=   215605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":527,"cm":null} reason=not_connected
+[t_ms=   216005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":528,"cm":null} reason=not_connected
+[t_ms=   216405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":529,"cm":null} reason=not_connected
+[t_ms=   216454] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[216454][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   216467] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   216805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":530,"cm":null} reason=not_connected
+[t_ms=   217205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":531,"cm":null} reason=not_connected
+[t_ms=   217605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":532,"cm":null} reason=not_connected
+[t_ms=   218005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":533,"cm":null} reason=not_connected
+[t_ms=   218405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":534,"cm":null} reason=not_connected
+[t_ms=   218467] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[218467][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   218480] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   218805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":535,"cm":null} reason=not_connected
+[t_ms=   219205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":536,"cm":null} reason=not_connected
+[t_ms=   219605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":537,"cm":null} reason=not_connected
+[t_ms=   220005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":538,"cm":null} reason=not_connected
+[t_ms=   220405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":539,"cm":null} reason=not_connected
+[t_ms=   220480] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[220480][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   220493] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   220805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":540,"cm":null} reason=not_connected
+[t_ms=   221205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":541,"cm":null} reason=not_connected
+[t_ms=   221605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":542,"cm":null} reason=not_connected
+[t_ms=   222005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":543,"cm":null} reason=not_connected
+[t_ms=   222405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":544,"cm":null} reason=not_connected
+[t_ms=   222493] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[222493][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   222506] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   222805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":545,"cm":null} reason=not_connected
+[t_ms=   223205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":546,"cm":null} reason=not_connected
+[t_ms=   223605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":547,"cm":null} reason=not_connected
+[t_ms=   224005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":548,"cm":null} reason=not_connected
+[t_ms=   224383] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":549,"cm":19.8} reason=not_connected
+[t_ms=   224506] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[224506][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   224519] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   224805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":550,"cm":null} reason=not_connected
+[t_ms=   225205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":551,"cm":null} reason=not_connected
+[t_ms=   225605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":552,"cm":null} reason=not_connected
+[t_ms=   226005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":553,"cm":null} reason=not_connected
+[t_ms=   226405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":554,"cm":null} reason=not_connected
+[t_ms=   226519] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[226519][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   226532] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   226805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":555,"cm":null} reason=not_connected
+[t_ms=   227205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":556,"cm":null} reason=not_connected
+[t_ms=   227605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":557,"cm":null} reason=not_connected
+[t_ms=   228005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":558,"cm":null} reason=not_connected
+[t_ms=   228405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":559,"cm":null} reason=not_connected
+[t_ms=   228532] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[228532][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   228545] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   228805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":560,"cm":null} reason=not_connected
+[t_ms=   229205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":561,"cm":null} reason=not_connected
+[t_ms=   229605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":562,"cm":null} reason=not_connected
+[t_ms=   230005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":563,"cm":null} reason=not_connected
+[t_ms=   230405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":564,"cm":null} reason=not_connected
+[t_ms=   230545] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[230545][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   230558] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   230805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":565,"cm":null} reason=not_connected
+[t_ms=   231205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":566,"cm":null} reason=not_connected
+[t_ms=   231605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":567,"cm":null} reason=not_connected
+[t_ms=   232005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":568,"cm":null} reason=not_connected
+[t_ms=   232405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":569,"cm":null} reason=not_connected
+[t_ms=   232558] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[232558][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   232571] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   232805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":570,"cm":null} reason=not_connected
+[t_ms=   233205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":571,"cm":null} reason=not_connected
+[t_ms=   233605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":572,"cm":null} reason=not_connected
+[t_ms=   234005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":573,"cm":null} reason=not_connected
+[t_ms=   234405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":574,"cm":null} reason=not_connected
+[t_ms=   234571] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[234571][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   234584] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   234805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":575,"cm":null} reason=not_connected
+[t_ms=   235205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":576,"cm":null} reason=not_connected
+[t_ms=   235605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":577,"cm":null} reason=not_connected
+[t_ms=   236005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":578,"cm":null} reason=not_connected
+[t_ms=   236405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":579,"cm":null} reason=not_connected
+[t_ms=   236584] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[236584][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   236597] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   236805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":580,"cm":null} reason=not_connected
+[t_ms=   237205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":581,"cm":null} reason=not_connected
+[t_ms=   237605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":582,"cm":null} reason=not_connected
+[t_ms=   238005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":583,"cm":null} reason=not_connected
+[t_ms=   238405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":584,"cm":null} reason=not_connected
+[t_ms=   238597] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[238597][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   238610] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   238805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":585,"cm":null} reason=not_connected
+[t_ms=   239205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":586,"cm":null} reason=not_connected
+[t_ms=   239605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":587,"cm":null} reason=not_connected
+[t_ms=   240005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":588,"cm":null} reason=not_connected
+[t_ms=   240405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":589,"cm":null} reason=not_connected
+[t_ms=   240610] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[240610][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   240623] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   240784] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":590,"cm":36.2} reason=not_connected
+[t_ms=   241205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":591,"cm":null} reason=not_connected
+[t_ms=   241605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":592,"cm":null} reason=not_connected
+[t_ms=   242005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":593,"cm":null} reason=not_connected
+[t_ms=   242405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":594,"cm":null} reason=not_connected
+[t_ms=   242623] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[242623][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   242636] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   242805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":595,"cm":null} reason=not_connected
+[t_ms=   243205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":596,"cm":null} reason=not_connected
+[t_ms=   243605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":597,"cm":null} reason=not_connected
+[t_ms=   244005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":598,"cm":null} reason=not_connected
+[t_ms=   244405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":599,"cm":null} reason=not_connected
+[t_ms=   244636] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[244636][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   244649] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   244805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":600,"cm":null} reason=not_connected
+[t_ms=   245205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":601,"cm":null} reason=not_connected
+[t_ms=   245605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":602,"cm":null} reason=not_connected
+[t_ms=   246005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":603,"cm":null} reason=not_connected
+[t_ms=   246405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":604,"cm":null} reason=not_connected
+[t_ms=   246649] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[246649][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   246662] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   246805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":605,"cm":null} reason=not_connected
+[t_ms=   247183] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":606,"cm":25.0} reason=not_connected
+[t_ms=   247605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":607,"cm":null} reason=not_connected
+[t_ms=   248005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":608,"cm":null} reason=not_connected
+[t_ms=   248405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":609,"cm":null} reason=not_connected
+[t_ms=   248662] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[248662][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   248675] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   248805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":610,"cm":null} reason=not_connected
+[t_ms=   249205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":611,"cm":null} reason=not_connected
+[t_ms=   249605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":612,"cm":null} reason=not_connected
+[t_ms=   250005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":613,"cm":null} reason=not_connected
+[t_ms=   250405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":614,"cm":null} reason=not_connected
+[t_ms=   250675] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[250675][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   250688] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   250805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":615,"cm":null} reason=not_connected
+[t_ms=   251205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":616,"cm":null} reason=not_connected
+[t_ms=   251584] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":617,"cm":37.4} reason=not_connected
+[t_ms=   252005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":618,"cm":null} reason=not_connected
+[t_ms=   252405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":619,"cm":null} reason=not_connected
+[t_ms=   252688] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[252688][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   252701] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   252784] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":620,"cm":37.4} reason=not_connected
+[t_ms=   253205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":621,"cm":null} reason=not_connected
+[t_ms=   253605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":622,"cm":null} reason=not_connected
+[t_ms=   254005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":623,"cm":null} reason=not_connected
+[t_ms=   254405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":624,"cm":null} reason=not_connected
+[t_ms=   254701] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[254701][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   254714] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   254805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":625,"cm":null} reason=not_connected
+[t_ms=   255205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":626,"cm":null} reason=not_connected
+[t_ms=   255605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":627,"cm":null} reason=not_connected
+[t_ms=   256005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":628,"cm":null} reason=not_connected
+[t_ms=   256405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":629,"cm":null} reason=not_connected
+[t_ms=   256714] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[256714][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   256727] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   256805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":630,"cm":null} reason=not_connected
+[t_ms=   257205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":631,"cm":null} reason=not_connected
+[t_ms=   257605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":632,"cm":null} reason=not_connected
+[t_ms=   258005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":633,"cm":null} reason=not_connected
+[t_ms=   258405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":634,"cm":null} reason=not_connected
+[t_ms=   258727] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[258727][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   258740] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   258805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":635,"cm":null} reason=not_connected
+[t_ms=   259205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":636,"cm":null} reason=not_connected
+[t_ms=   259605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":637,"cm":null} reason=not_connected
+[t_ms=   260005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":638,"cm":null} reason=not_connected
+[t_ms=   260405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":639,"cm":null} reason=not_connected
+[t_ms=   260740] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[260740][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   260753] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   260805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":640,"cm":null} reason=not_connected
+[t_ms=   261205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":641,"cm":null} reason=not_connected
+[t_ms=   261605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":642,"cm":null} reason=not_connected
+[t_ms=   262005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":643,"cm":null} reason=not_connected
+[t_ms=   262405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":644,"cm":null} reason=not_connected
+[t_ms=   262753] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[262753][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   262766] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   262805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":645,"cm":null} reason=not_connected
+[t_ms=   263205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":646,"cm":null} reason=not_connected
+[t_ms=   263605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":647,"cm":null} reason=not_connected
+[t_ms=   264005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":648,"cm":null} reason=not_connected
+[t_ms=   264405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":649,"cm":null} reason=not_connected
+[t_ms=   264766] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[264766][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   264779] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   264805] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":650,"cm":null} reason=not_connected
+[t_ms=   265205] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":651,"cm":null} reason=not_connected
+[t_ms=   265605] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":652,"cm":null} reason=not_connected
+[t_ms=   266005] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":653,"cm":null} reason=not_connected
+[t_ms=   266405] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":654,"cm":null} reason=not_connected
+[t_ms=   266779] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[266779][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   266792] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   266817] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":655,"cm":null} reason=not_connected
+[t_ms=   267217] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":656,"cm":null} reason=not_connected
+[t_ms=   267617] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":657,"cm":null} reason=not_connected
+[t_ms=   268017] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":658,"cm":null} reason=not_connected
+[t_ms=   268417] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":659,"cm":null} reason=not_connected
+[t_ms=   268792] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[268792][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   268805] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   268830] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":660,"cm":null} reason=not_connected
+[t_ms=   269230] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":661,"cm":null} reason=not_connected
+[t_ms=   269630] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":662,"cm":null} reason=not_connected
+[t_ms=   270030] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":663,"cm":null} reason=not_connected
+[t_ms=   270430] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":664,"cm":null} reason=not_connected
+[t_ms=   270805] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[270805][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   270818] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   270843] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":665,"cm":null} reason=not_connected
+[t_ms=   271243] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":666,"cm":null} reason=not_connected
+[t_ms=   271643] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":667,"cm":null} reason=not_connected
+[t_ms=   272043] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":668,"cm":null} reason=not_connected
+[t_ms=   272443] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":669,"cm":null} reason=not_connected
+[t_ms=   272818] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[272818][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   272831] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   272856] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":670,"cm":null} reason=not_connected
+[t_ms=   273256] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":671,"cm":null} reason=not_connected
+[t_ms=   273656] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":672,"cm":null} reason=not_connected
+[t_ms=   274056] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":673,"cm":null} reason=not_connected
+[t_ms=   274456] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":674,"cm":null} reason=not_connected
+[t_ms=   274831] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[274831][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   274844] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   274869] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":675,"cm":null} reason=not_connected
+[t_ms=   275269] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":676,"cm":null} reason=not_connected
+[t_ms=   275669] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":677,"cm":null} reason=not_connected
+[t_ms=   276069] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":678,"cm":null} reason=not_connected
+[t_ms=   276469] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":679,"cm":null} reason=not_connected
+[t_ms=   276844] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[276844][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   276857] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   276882] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":680,"cm":null} reason=not_connected
+[t_ms=   277282] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":681,"cm":null} reason=not_connected
+[t_ms=   277682] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":682,"cm":null} reason=not_connected
+[t_ms=   278082] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":683,"cm":null} reason=not_connected
+[t_ms=   278482] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":684,"cm":null} reason=not_connected
+[t_ms=   278857] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[278857][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   278870] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   278873] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":685,"cm":21.4} reason=not_connected
+[t_ms=   279295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":686,"cm":null} reason=not_connected
+[t_ms=   279695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":687,"cm":null} reason=not_connected
+[t_ms=   280095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":688,"cm":null} reason=not_connected
+[t_ms=   280495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":689,"cm":null} reason=not_connected
+[t_ms=   280870] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[280870][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   280883] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   280908] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":690,"cm":null} reason=not_connected
+[t_ms=   281295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":691,"cm":null} reason=not_connected
+[t_ms=   281695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":692,"cm":null} reason=not_connected
+[t_ms=   282095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":693,"cm":null} reason=not_connected
+[t_ms=   282495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":694,"cm":null} reason=not_connected
+[t_ms=   282883] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[282883][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   282896] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   282896] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":695,"cm":null} reason=not_connected
+[t_ms=   283295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":696,"cm":null} reason=not_connected
+[t_ms=   283695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":697,"cm":null} reason=not_connected
+[t_ms=   284095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":698,"cm":null} reason=not_connected
+[t_ms=   284495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":699,"cm":null} reason=not_connected
+[t_ms=   284895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":700,"cm":null} reason=not_connected
+[t_ms=   284896] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[284906][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   284917] MQTT_RETRY       state=-2 took_ms=11
+[t_ms=   285295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":701,"cm":null} reason=not_connected
+[t_ms=   285695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":702,"cm":null} reason=not_connected
+[t_ms=   286095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":703,"cm":null} reason=not_connected
+[t_ms=   286495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":704,"cm":null} reason=not_connected
+[t_ms=   286895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":705,"cm":null} reason=not_connected
+[t_ms=   286918] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[286918][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   286931] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   287295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":706,"cm":null} reason=not_connected
+[t_ms=   287695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":707,"cm":null} reason=not_connected
+[t_ms=   288095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":708,"cm":null} reason=not_connected
+[t_ms=   288495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":709,"cm":null} reason=not_connected
+[t_ms=   288895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":710,"cm":null} reason=not_connected
+[t_ms=   288931] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[288931][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   288944] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   289295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":711,"cm":null} reason=not_connected
+[t_ms=   289695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":712,"cm":null} reason=not_connected
+[t_ms=   290095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":713,"cm":null} reason=not_connected
+[t_ms=   290495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":714,"cm":null} reason=not_connected
+[t_ms=   290872] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":715,"cm":4.6} reason=not_connected
+[t_ms=   290944] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[290944][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   290957] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   291295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":716,"cm":null} reason=not_connected
+[t_ms=   291672] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":717,"cm":5.6} reason=not_connected
+[t_ms=   292095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":718,"cm":null} reason=not_connected
+[t_ms=   292472] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":719,"cm":5.6} reason=not_connected
+[t_ms=   292895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":720,"cm":null} reason=not_connected
+[t_ms=   292957] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[292957][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   292970] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   293295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":721,"cm":null} reason=not_connected
+[t_ms=   293695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":722,"cm":null} reason=not_connected
+[t_ms=   294095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":723,"cm":null} reason=not_connected
+[t_ms=   294472] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":724,"cm":4.9} reason=not_connected
+[t_ms=   294895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":725,"cm":null} reason=not_connected
+[t_ms=   294970] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[294970][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   294983] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   295295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":726,"cm":null} reason=not_connected
+[t_ms=   295672] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":727,"cm":5.6} reason=not_connected
+[t_ms=   296095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":728,"cm":null} reason=not_connected
+[t_ms=   296495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":729,"cm":null} reason=not_connected
+[t_ms=   296895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":730,"cm":null} reason=not_connected
+[t_ms=   296983] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[296983][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   296996] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   297295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":731,"cm":null} reason=not_connected
+[t_ms=   297695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":732,"cm":null} reason=not_connected
+[t_ms=   298095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":733,"cm":null} reason=not_connected
+[t_ms=   298495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":734,"cm":null} reason=not_connected
+[t_ms=   298895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":735,"cm":null} reason=not_connected
+[t_ms=   298996] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[298996][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   299009] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   299295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":736,"cm":null} reason=not_connected
+[t_ms=   299695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":737,"cm":null} reason=not_connected
+[t_ms=   300072] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":738,"cm":4.3} reason=not_connected
+[t_ms=   300472] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":739,"cm":4.3} reason=not_connected
+[t_ms=   300895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":740,"cm":null} reason=not_connected
+[t_ms=   301009] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[301009][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   301022] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   301295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":741,"cm":null} reason=not_connected
+[t_ms=   301695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":742,"cm":null} reason=not_connected
+[t_ms=   302095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":743,"cm":null} reason=not_connected
+[t_ms=   302495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":744,"cm":null} reason=not_connected
+[t_ms=   302895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":745,"cm":null} reason=not_connected
+[t_ms=   303022] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[303022][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   303035] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   303295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":746,"cm":null} reason=not_connected
+[t_ms=   303695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":747,"cm":null} reason=not_connected
+[t_ms=   304095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":748,"cm":null} reason=not_connected
+[t_ms=   304495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":749,"cm":null} reason=not_connected
+[t_ms=   304895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":750,"cm":null} reason=not_connected
+[t_ms=   305035] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[305035][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   305048] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   305295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":751,"cm":null} reason=not_connected
+[t_ms=   305695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":752,"cm":null} reason=not_connected
+[t_ms=   306095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":753,"cm":null} reason=not_connected
+[t_ms=   306495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":754,"cm":null} reason=not_connected
+[t_ms=   306895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":755,"cm":null} reason=not_connected
+[t_ms=   307048] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[307048][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   307061] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   307272] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":756,"cm":4.3} reason=not_connected
+[t_ms=   307695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":757,"cm":null} reason=not_connected
+[t_ms=   308072] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":758,"cm":4.3} reason=not_connected
+[t_ms=   308495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":759,"cm":null} reason=not_connected
+[t_ms=   308895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":760,"cm":null} reason=not_connected
+[t_ms=   309061] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[309061][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   309074] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   309295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":761,"cm":null} reason=not_connected
+[t_ms=   309695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":762,"cm":null} reason=not_connected
+[t_ms=   310095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":763,"cm":null} reason=not_connected
+[t_ms=   310495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":764,"cm":null} reason=not_connected
+[t_ms=   310895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":765,"cm":null} reason=not_connected
+[t_ms=   311074] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[311074][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   311087] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   311295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":766,"cm":null} reason=not_connected
+[t_ms=   311695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":767,"cm":null} reason=not_connected
+[t_ms=   312095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":768,"cm":null} reason=not_connected
+[t_ms=   312495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":769,"cm":null} reason=not_connected
+[t_ms=   312895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":770,"cm":null} reason=not_connected
+[t_ms=   313087] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[313087][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   313100] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   313295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":771,"cm":null} reason=not_connected
+[t_ms=   313695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":772,"cm":null} reason=not_connected
+[t_ms=   314095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":773,"cm":null} reason=not_connected
+[t_ms=   314495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":774,"cm":null} reason=not_connected
+[t_ms=   314895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":775,"cm":null} reason=not_connected
+[t_ms=   315100] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[315100][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   315113] MQTT_RETRY       state=-2 took_ms=13
+[t_ms=   315295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":776,"cm":null} reason=not_connected
+[t_ms=   315315] WIFI_LOST        status=0
+[t_ms=   315695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":777,"cm":null} reason=not_connected
+[t_ms=   316095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":778,"cm":null} reason=not_connected
+[t_ms=   316495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":779,"cm":null} reason=not_connected
+[t_ms=   316895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":780,"cm":null} reason=not_connected
+[t_ms=   317272] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":781,"cm":4.6} reason=not_connected
+[t_ms=   317695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":782,"cm":null} reason=not_connected
+[t_ms=   318095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":783,"cm":null} reason=not_connected
+[t_ms=   318495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":784,"cm":null} reason=not_connected
+[t_ms=   318895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":785,"cm":null} reason=not_connected
+[t_ms=   319295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":786,"cm":null} reason=not_connected
+[t_ms=   319695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":787,"cm":null} reason=not_connected
+[t_ms=   320095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":788,"cm":null} reason=not_connected
+[t_ms=   320495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":789,"cm":null} reason=not_connected
+[t_ms=   320895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":790,"cm":null} reason=not_connected
+[t_ms=   321295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":791,"cm":null} reason=not_connected
+[t_ms=   321695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":792,"cm":null} reason=not_connected
+[t_ms=   322095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":793,"cm":null} reason=not_connected
+[t_ms=   322495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":794,"cm":null} reason=not_connected
+[t_ms=   322895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":795,"cm":null} reason=not_connected
+[t_ms=   323295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":796,"cm":null} reason=not_connected
+[t_ms=   323695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":797,"cm":null} reason=not_connected
+[t_ms=   324095] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":798,"cm":null} reason=not_connected
+[t_ms=   324495] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":799,"cm":null} reason=not_connected
+[t_ms=   324895] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":800,"cm":null} reason=not_connected
+[t_ms=   325295] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":801,"cm":null} reason=not_connected
+[t_ms=   325315] WIFI_RETRY       status=0
+[t_ms=   325695] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":802,"cm":null} reason=not_connected
+[t_ms=   325701] WIFI_CONNECTED   ip=172.20.10.3 rssi_dbm=-57
+[t_ms=   325701] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[t_ms=   326398] MQTT_CONNECTED   took_ms=686
+[t_ms=   326403] PUB              topic=sis234/grupo1/status payload=online
+[t_ms=   326403] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=   326414] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=   326441] PUB              topic=sis234/grupo1/distance payload={"seq":803,"cm":null}
+[t_ms=   326840] PUB              topic=sis234/grupo1/distance payload={"seq":804,"cm":null}
+[t_ms=   327240] PUB              topic=sis234/grupo1/distance payload={"seq":805,"cm":null}
+[t_ms=   327642] PUB              topic=sis234/grupo1/distance payload={"seq":806,"cm":null}
+[t_ms=   328042] PUB              topic=sis234/grupo1/distance payload={"seq":807,"cm":null}
+[t_ms=   328442] PUB              topic=sis234/grupo1/distance payload={"seq":808,"cm":null}
+[t_ms=   328842] PUB              topic=sis234/grupo1/distance payload={"seq":809,"cm":null}
+[t_ms=   329242] PUB              topic=sis234/grupo1/distance payload={"seq":810,"cm":null}
+[t_ms=   329620] PUB              topic=sis234/grupo1/distance payload={"seq":811,"cm":5.9}
+[t_ms=   330042] PUB              topic=sis234/grupo1/distance payload={"seq":812,"cm":null}
+[t_ms=   330442] PUB              topic=sis234/grupo1/distance payload={"seq":813,"cm":null}
+[t_ms=   330842] PUB              topic=sis234/grupo1/distance payload={"seq":814,"cm":null}
+[t_ms=   331222] PUB              topic=sis234/grupo1/distance payload={"seq":815,"cm":29.5}
+[t_ms=   331643] PUB              topic=sis234/grupo1/distance payload={"seq":816,"cm":null}
+[t_ms=   332021] PUB              topic=sis234/grupo1/distance payload={"seq":817,"cm":29.0}
+[t_ms=   332422] PUB              topic=sis234/grupo1/distance payload={"seq":818,"cm":35.7}
+[t_ms=   332842] PUB              topic=sis234/grupo1/distance payload={"seq":819,"cm":null}
+[t_ms=   333240] PUB              topic=sis234/grupo1/distance payload={"seq":820,"cm":null}
+[t_ms=   333642] PUB              topic=sis234/grupo1/distance payload={"seq":821,"cm":null}
+[t_ms=   334042] PUB              topic=sis234/grupo1/distance payload={"seq":822,"cm":null}
+[t_ms=   334442] PUB              topic=sis234/grupo1/distance payload={"seq":823,"cm":null}
+[t_ms=   334842] PUB              topic=sis234/grupo1/distance payload={"seq":824,"cm":null}
+[t_ms=   335242] PUB              topic=sis234/grupo1/distance payload={"seq":825,"cm":null}
+[t_ms=   335642] PUB              topic=sis234/grupo1/distance payload={"seq":826,"cm":null}
+[t_ms=   336040] PUB              topic=sis234/grupo1/distance payload={"seq":827,"cm":null}
+[t_ms=   336440] PUB              topic=sis234/grupo1/distance payload={"seq":828,"cm":null}
+[t_ms=   336840] PUB              topic=sis234/grupo1/distance payload={"seq":829,"cm":null}
+[t_ms=   337240] PUB              topic=sis234/grupo1/distance payload={"seq":830,"cm":null}
+[t_ms=   337640] PUB              topic=sis234/grupo1/distance payload={"seq":831,"cm":null}
+[t_ms=   338040] PUB              topic=sis234/grupo1/distance payload={"seq":832,"cm":null}
+[t_ms=   338439] PUB              topic=sis234/grupo1/distance payload={"seq":833,"cm":null}
+[t_ms=   338840] PUB              topic=sis234/grupo1/distance payload={"seq":834,"cm":null}
+[t_ms=   339240] PUB              topic=sis234/grupo1/distance payload={"seq":835,"cm":null}
+[t_ms=   339640] PUB              topic=sis234/grupo1/distance payload={"seq":836,"cm":null}
+[t_ms=   340039] PUB              topic=sis234/grupo1/distance payload={"seq":837,"cm":null}
+[t_ms=   340440] PUB              topic=sis234/grupo1/distance payload={"seq":838,"cm":null}
+[t_ms=   340840] PUB              topic=sis234/grupo1/distance payload={"seq":839,"cm":null}
+[t_ms=   341240] PUB              topic=sis234/grupo1/distance payload={"seq":840,"cm":null}
+[t_ms=   341640] PUB              topic=sis234/grupo1/distance payload={"seq":841,"cm":null}
+[t_ms=   342040] PUB              topic=sis234/grupo1/distance payload={"seq":842,"cm":null}
+[t_ms=   342419] PUB              topic=sis234/grupo1/distance payload={"seq":843,"cm":26.7}
+[t_ms=   342840] PUB              topic=sis234/grupo1/distance payload={"seq":844,"cm":null}
+[t_ms=   343240] PUB              topic=sis234/grupo1/distance payload={"seq":845,"cm":null}
+[t_ms=   343640] PUB              topic=sis234/grupo1/distance payload={"seq":846,"cm":null}
+[t_ms=   343936] WIFI_LOST        status=5
+[t_ms=   343936] MQTT_LOST        reason=wifi_lost
+[t_ms=   344017] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":847,"cm":16.9} reason=not_connected
+[t_ms=   344417] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":848,"cm":17.0} reason=not_connected
+[t_ms=   344817] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":849,"cm":11.2} reason=not_connected
+[t_ms=   345239] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":850,"cm":null} reason=not_connected
+[t_ms=   345639] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":851,"cm":null} reason=not_connected
+[t_ms=   346039] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":852,"cm":null} reason=not_connected
+[t_ms=   346439] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":853,"cm":null} reason=not_connected
+[t_ms=   346839] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":854,"cm":null} reason=not_connected
+[t_ms=   347239] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":855,"cm":null} reason=not_connected
+[t_ms=   347639] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":856,"cm":null} reason=not_connected
+[t_ms=   348039] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":857,"cm":null} reason=not_connected
+[t_ms=   348439] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":858,"cm":null} reason=not_connected
+[t_ms=   348839] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":859,"cm":null} reason=not_connected
+[t_ms=   349239] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":860,"cm":null} reason=not_connected
+[t_ms=   349639] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":861,"cm":null} reason=not_connected
+[t_ms=   350039] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":862,"cm":null} reason=not_connected
+[t_ms=   350439] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":863,"cm":null} reason=not_connected
+[t_ms=   350839] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":864,"cm":null} reason=not_connected
+[t_ms=   351239] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":865,"cm":null} reason=not_connected
+[t_ms=   351639] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":866,"cm":null} reason=not_connected
+[t_ms=   352039] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":867,"cm":null} reason=not_connected
+[t_ms=   352439] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":868,"cm":null} reason=not_connected
+[t_ms=   352839] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":869,"cm":null} reason=not_connected
+[t_ms=   353239] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":870,"cm":null} reason=not_connected
+[t_ms=   353639] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":871,"cm":null} reason=not_connected
+����������������������������������������������������������������s=   353933] WIFI_RETRY       status=5
+[t_ms=   354039] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":872,"cm":null} reason=not_connected
+[t_ms=   354223] WIFI_CONNECTED   ip=172.20.10.3 rssi_dbm=-51
+[t_ms=   354223] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[t_ms=   354813] MQTT_CONNECTED   took_ms=590
+[t_ms=   354818] PUB              topic=sis234/grupo1/status payload=online
+[t_ms=   354818] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=   354829] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=   354856] PUB              topic=sis234/grupo1/distance payload={"seq":873,"cm":null}
+[t_ms=   355255] PUB              topic=sis234/grupo1/distance payload={"seq":874,"cm":null}
+[t_ms=   355655] PUB              topic=sis234/grupo1/distance payload={"seq":875,"cm":null}
+[t_ms=   356055] PUB              topic=sis234/grupo1/distance payload={"seq":876,"cm":null}
+[t_ms=   356433] PUB              topic=sis234/grupo1/distance payload={"seq":877,"cm":8.1}
+[t_ms=   356835] PUB              topic=sis234/grupo1/distance payload={"seq":878,"cm":5.6}
+[t_ms=   357235] PUB              topic=sis234/grupo1/distance payload={"seq":879,"cm":9.5}
+[t_ms=   357657] PUB              topic=sis234/grupo1/distance payload={"seq":880,"cm":null}
+[t_ms=   358057] PUB              topic=sis234/grupo1/distance payload={"seq":881,"cm":null}
+[t_ms=   358457] PUB              topic=sis234/grupo1/distance payload={"seq":882,"cm":null}
+[t_ms=   358857] PUB              topic=sis234/grupo1/distance payload={"seq":883,"cm":null}
+[t_ms=   359237] PUB              topic=sis234/grupo1/distance payload={"seq":884,"cm":36.7}
+[t_ms=   359635] PUB              topic=sis234/grupo1/distance payload={"seq":885,"cm":6.2}
+[t_ms=   360036] PUB              topic=sis234/grupo1/distance payload={"seq":886,"cm":10.6}
+[t_ms=   360435] PUB              topic=sis234/grupo1/distance payload={"seq":887,"cm":11.9}
+[t_ms=   360835] PUB              topic=sis234/grupo1/distance payload={"seq":888,"cm":10.5}
+[t_ms=   361235] PUB              topic=sis234/grupo1/distance payload={"seq":889,"cm":9.5}
+[t_ms=   361635] PUB              topic=sis234/grupo1/distance payload={"seq":890,"cm":9.5}
+[t_ms=   362035] PUB              topic=sis234/grupo1/distance payload={"seq":891,"cm":8.5}
+[t_ms=   362435] PUB              topic=sis234/grupo1/distance payload={"seq":892,"cm":9.1}
+[t_ms=   362835] PUB              topic=sis234/grupo1/distance payload={"seq":893,"cm":9.5}
+[t_ms=   363235] PUB              topic=sis234/grupo1/distance payload={"seq":894,"cm":5.6}
+[t_ms=   363637] PUB              topic=sis234/grupo1/distance payload={"seq":895,"cm":37.6}
+[t_ms=   364037] PUB              topic=sis234/grupo1/distance payload={"seq":896,"cm":40.0}
+[t_ms=   364437] PUB              topic=sis234/grupo1/distance payload={"seq":897,"cm":38.1}
+[t_ms=   364837] PUB              topic=sis234/grupo1/distance payload={"seq":898,"cm":40.1}
+[t_ms=   365237] PUB              topic=sis234/grupo1/distance payload={"seq":899,"cm":38.0}
+[t_ms=   365637] PUB              topic=sis234/grupo1/distance payload={"seq":900,"cm":38.0}
+[t_ms=   366037] PUB              topic=sis234/grupo1/distance payload={"seq":901,"cm":38.0}
+[t_ms=   366437] PUB              topic=sis234/grupo1/distance payload={"seq":902,"cm":38.0}
+[t_ms=   366837] PUB              topic=sis234/grupo1/distance payload={"seq":903,"cm":38.1}
+[t_ms=   367237] PUB              topic=sis234/grupo1/distance payload={"seq":904,"cm":38.0}
+[t_ms=   367637] PUB              topic=sis234/grupo1/distance payload={"seq":905,"cm":38.1}
+[t_ms=   368037] PUB              topic=sis234/grupo1/distance payload={"seq":906,"cm":38.0}
+[t_ms=   368437] PUB              topic=sis234/grupo1/distance payload={"seq":907,"cm":38.1}
+[t_ms=   368835] PUB              topic=sis234/grupo1/distance payload={"seq":908,"cm":38.1}
+[t_ms=   369235] PUB              topic=sis234/grupo1/distance payload={"seq":909,"cm":40.6}
+[t_ms=   369452] MQTT_LOST        state=-3
+[t_ms=   369452] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[369453][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   369471] MQTT_RETRY       state=-2 took_ms=18
+[t_ms=   369634] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":910,"cm":40.6} reason=not_connected
+[t_ms=   370033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":911,"cm":40.6} reason=not_connected
+[t_ms=   370433] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":912,"cm":40.1} reason=not_connected
+[t_ms=   370833] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":913,"cm":40.6} reason=not_connected
+[t_ms=   371233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":914,"cm":40.6} reason=not_connected
+[t_ms=   371471] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[371471][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   371485] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   371633] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":915,"cm":40.6} reason=not_connected
+[t_ms=   372033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":916,"cm":38.1} reason=not_connected
+[t_ms=   372433] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":917,"cm":38.0} reason=not_connected
+[t_ms=   372833] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":918,"cm":38.0} reason=not_connected
+[t_ms=   373233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":919,"cm":40.6} reason=not_connected
+[t_ms=   373485] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[373485][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   373499] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   373633] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":920,"cm":38.1} reason=not_connected
+[t_ms=   374033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":921,"cm":40.1} reason=not_connected
+[t_ms=   374433] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":922,"cm":40.1} reason=not_connected
+[t_ms=   374833] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":923,"cm":40.1} reason=not_connected
+[t_ms=   375233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":924,"cm":40.1} reason=not_connected
+[t_ms=   375499] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[375499][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   375513] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   375633] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":925,"cm":38.0} reason=not_connected
+[t_ms=   376033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":926,"cm":38.0} reason=not_connected
+[t_ms=   376433] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":927,"cm":40.6} reason=not_connected
+[t_ms=   376833] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":928,"cm":40.6} reason=not_connected
+[t_ms=   377233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":929,"cm":38.0} reason=not_connected
+[t_ms=   377513] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[377513][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   377527] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   377633] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":930,"cm":40.1} reason=not_connected
+[t_ms=   378033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":931,"cm":40.1} reason=not_connected
+[t_ms=   378433] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":932,"cm":40.1} reason=not_connected
+[t_ms=   378833] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":933,"cm":40.6} reason=not_connected
+[t_ms=   379233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":934,"cm":38.0} reason=not_connected
+[t_ms=   379527] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[379527][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   379541] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   379633] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":935,"cm":38.1} reason=not_connected
+[t_ms=   380033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":936,"cm":40.6} reason=not_connected
+[t_ms=   380433] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":937,"cm":38.5} reason=not_connected
+[t_ms=   380833] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":938,"cm":38.0} reason=not_connected
+[t_ms=   381233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":939,"cm":40.1} reason=not_connected
+[t_ms=   381541] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[381541][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   381555] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   381633] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":940,"cm":38.0} reason=not_connected
+[t_ms=   382033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":941,"cm":40.6} reason=not_connected
+[t_ms=   382433] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":942,"cm":40.6} reason=not_connected
+[t_ms=   382833] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":943,"cm":38.0} reason=not_connected
+[t_ms=   383233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":944,"cm":40.6} reason=not_connected
+[t_ms=   383555] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[383555][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   383569] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   383633] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":945,"cm":27.3} reason=not_connected
+[t_ms=   384033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":946,"cm":29.0} reason=not_connected
+[t_ms=   384432] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":947,"cm":22.6} reason=not_connected
+[t_ms=   384832] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":948,"cm":22.3} reason=not_connected
+[t_ms=   385232] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":949,"cm":24.4} reason=not_connected
+[t_ms=   385569] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[385569][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   385583] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   385632] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":950,"cm":22.4} reason=not_connected
+[t_ms=   386032] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":951,"cm":20.8} reason=not_connected
+[t_ms=   386432] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":952,"cm":22.6} reason=not_connected
+[t_ms=   386832] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":953,"cm":23.5} reason=not_connected
+[t_ms=   387232] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":954,"cm":22.0} reason=not_connected
+[t_ms=   387583] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[387583][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   387597] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   387632] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":955,"cm":21.7} reason=not_connected
+[t_ms=   388032] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":956,"cm":23.2} reason=not_connected
+[t_ms=   388432] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":957,"cm":21.4} reason=not_connected
+[t_ms=   388832] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":958,"cm":20.8} reason=not_connected
+[t_ms=   389232] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":959,"cm":20.8} reason=not_connected
+[t_ms=   389597] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[389597][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   389611] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   389632] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":960,"cm":21.1} reason=not_connected
+[t_ms=   390032] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":961,"cm":21.1} reason=not_connected
+[t_ms=   390432] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":962,"cm":21.4} reason=not_connected
+[t_ms=   390832] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":963,"cm":21.1} reason=not_connected
+[t_ms=   391233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":964,"cm":38.5} reason=not_connected
+[t_ms=   391611] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[391611][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   391625] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   391633] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":965,"cm":38.5} reason=not_connected
+[t_ms=   392033] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":966,"cm":38.5} reason=not_connected
+[t_ms=   392433] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":967,"cm":38.5} reason=not_connected
+[t_ms=   392833] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":968,"cm":40.6} reason=not_connected
+[t_ms=   393233] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":969,"cm":40.6} reason=not_connected
+[t_ms=   393625] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[393625][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   393639] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   393644] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":970,"cm":38.1} reason=not_connected
+[t_ms=   394043] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":971,"cm":38.5} reason=not_connected
+[t_ms=   394443] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":972,"cm":40.6} reason=not_connected
+[t_ms=   394843] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":973,"cm":38.1} reason=not_connected
+[t_ms=   395243] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":974,"cm":38.1} reason=not_connected
+[t_ms=   395639] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[395639][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   395653] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   395658] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":975,"cm":40.6} reason=not_connected
+[t_ms=   396057] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":976,"cm":38.0} reason=not_connected
+[t_ms=   396457] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":977,"cm":40.6} reason=not_connected
+[t_ms=   396857] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":978,"cm":38.5} reason=not_connected
+[t_ms=   397257] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":979,"cm":38.5} reason=not_connected
+[t_ms=   397653] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[397653][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   397667] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   397672] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":980,"cm":38.5} reason=not_connected
+[t_ms=   398071] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":981,"cm":38.0} reason=not_connected
+[t_ms=   398471] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":982,"cm":40.6} reason=not_connected
+[t_ms=   398871] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":983,"cm":40.6} reason=not_connected
+[t_ms=   399271] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":984,"cm":38.5} reason=not_connected
+[t_ms=   399667] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[399667][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   399681] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   399686] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":985,"cm":38.5} reason=not_connected
+[t_ms=   400085] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":986,"cm":38.5} reason=not_connected
+[t_ms=   400485] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":987,"cm":38.5} reason=not_connected
+[t_ms=   400885] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":988,"cm":38.5} reason=not_connected
+[t_ms=   401285] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":989,"cm":38.5} reason=not_connected
+[t_ms=   401681] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[401681][E][WiFiClient.cpp:249] connect(): connect on fd 48, errno: 118, "Host is unreachable"
+[t_ms=   401695] MQTT_RETRY       state=-2 took_ms=14
+[t_ms=   401700] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":990,"cm":38.5} reason=not_connected
+[t_ms=   402099] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":991,"cm":38.1} reason=not_connected
+[t_ms=   402499] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":992,"cm":38.1} reason=not_connected
+[t_ms=   402899] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":993,"cm":38.5} reason=not_connected
+[t_ms=   403299] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":994,"cm":29.8} reason=not_connected
+[t_ms=   403695] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[410695][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   410702] MQTT_RETRY       state=-2 took_ms=7007
+[t_ms=   410706] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":995,"cm":16.9} reason=not_connected
+[t_ms=   411105] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":996,"cm":10.9} reason=not_connected
+[t_ms=   411527] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":997,"cm":null} reason=not_connected
+[t_ms=   411905] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":998,"cm":16.9} reason=not_connected
+[t_ms=   412305] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":999,"cm":11.9} reason=not_connected
+[t_ms=   412702] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[419702][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   419709] MQTT_RETRY       state=-2 took_ms=7007
+[t_ms=   419714] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1000,"cm":40.5} reason=not_connected
+[t_ms=   420113] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1001,"cm":40.1} reason=not_connected
+[t_ms=   420513] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1002,"cm":40.1} reason=not_connected
+[t_ms=   420913] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1003,"cm":40.1} reason=not_connected
+[t_ms=   421313] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1004,"cm":40.1} reason=not_connected
+[t_ms=   421709] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[428709][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   428716] MQTT_RETRY       state=-2 took_ms=7007
+[t_ms=   428721] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1005,"cm":40.5} reason=not_connected
+[t_ms=   429120] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1006,"cm":40.6} reason=not_connected
+[t_ms=   429520] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1007,"cm":41.0} reason=not_connected
+[t_ms=   429920] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1008,"cm":38.5} reason=not_connected
+[t_ms=   430320] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1009,"cm":38.5} reason=not_connected
+[t_ms=   430716] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[437716][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   437723] MQTT_RETRY       state=-2 took_ms=7007
+[t_ms=   437728] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1010,"cm":38.4} reason=not_connected
+[t_ms=   438127] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1011,"cm":38.5} reason=not_connected
+[t_ms=   438527] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1012,"cm":38.5} reason=not_connected
+[t_ms=   438927] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1013,"cm":38.5} reason=not_connected
+[t_ms=   439327] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1014,"cm":38.5} reason=not_connected
+[t_ms=   439723] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[446723][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   446730] MQTT_RETRY       state=-2 took_ms=7007
+[t_ms=   446734] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1015,"cm":21.3} reason=not_connected
+[t_ms=   447133] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1016,"cm":22.9} reason=not_connected
+[t_ms=   447533] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1017,"cm":22.9} reason=not_connected
+[t_ms=   447933] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1018,"cm":23.2} reason=not_connected
+[t_ms=   448334] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1019,"cm":29.8} reason=not_connected
+[t_ms=   448730] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[455730][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   455737] MQTT_RETRY       state=-2 took_ms=7007
+[t_ms=   455741] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1020,"cm":24.3} reason=not_connected
+[t_ms=   456141] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1021,"cm":38.1} reason=not_connected
+[t_ms=   456541] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1022,"cm":38.5} reason=not_connected
+[t_ms=   456941] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1023,"cm":38.5} reason=not_connected
+[t_ms=   457341] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1024,"cm":38.5} reason=not_connected
+[t_ms=   457737] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[464737][E][WiFiGeneric.cpp:1583] hostByName(): DNS Failed for broker.hivemq.com
+[t_ms=   464744] MQTT_RETRY       state=-2 took_ms=7007
+[t_ms=   464744] WIFI_LOST        status=0
+[t_ms=   464749] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1025,"cm":38.4} reason=not_connected
+[t_ms=   465148] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1026,"cm":38.5} reason=not_connected
+[t_ms=   465548] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1027,"cm":38.5} reason=not_connected
+[t_ms=   465948] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1028,"cm":38.5} reason=not_connected
+[t_ms=   466348] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1029,"cm":27.6} reason=not_connected
+[t_ms=   466769] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1030,"cm":null} reason=not_connected
+[t_ms=   467148] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1031,"cm":38.5} reason=not_connected
+[t_ms=   467548] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1032,"cm":40.6} reason=not_connected
+[t_ms=   467948] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1033,"cm":37.6} reason=not_connected
+[t_ms=   468348] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1034,"cm":37.6} reason=not_connected
+[t_ms=   468748] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1035,"cm":38.5} reason=not_connected
+[t_ms=   469148] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1036,"cm":38.5} reason=not_connected
+[t_ms=   469548] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1037,"cm":38.0} reason=not_connected
+[t_ms=   469948] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1038,"cm":38.1} reason=not_connected
+[t_ms=   470348] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1039,"cm":38.1} reason=not_connected
+[t_ms=   470748] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1040,"cm":37.6} reason=not_connected
+[t_ms=   471148] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1041,"cm":29.5} reason=not_connected
+[t_ms=   471548] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1042,"cm":40.6} reason=not_connected
+[t_ms=   471948] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1043,"cm":38.5} reason=not_connected
+[t_ms=   472348] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1044,"cm":29.0} reason=not_connected
+[t_ms=   472748] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1045,"cm":27.8} reason=not_connected
+[t_ms=   473148] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1046,"cm":29.3} reason=not_connected
+[t_ms=   473569] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1047,"cm":null} reason=not_connected
+[t_ms=   473969] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1048,"cm":null} reason=not_connected
+[t_ms=   474369] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1049,"cm":null} reason=not_connected
+[t_ms=   474744] WIFI_RETRY       status=0
+[t_ms=   474780] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1050,"cm":null} reason=not_connected
+[t_ms=   475028] WIFI_CONNECTED   ip=172.20.10.3 rssi_dbm=-53
+[t_ms=   475028] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[t_ms=   475640] MQTT_CONNECTED   took_ms=612
+[t_ms=   475644] PUB              topic=sis234/grupo1/status payload=online
+[t_ms=   475645] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=   475656] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=   475682] PUB              topic=sis234/grupo1/distance payload={"seq":1051,"cm":null}
+[t_ms=   476082] PUB              topic=sis234/grupo1/distance payload={"seq":1052,"cm":null}
+[t_ms=   476482] PUB              topic=sis234/grupo1/distance payload={"seq":1053,"cm":null}
+[t_ms=   476884] PUB              topic=sis234/grupo1/distance payload={"seq":1054,"cm":null}
+[t_ms=   477284] PUB              topic=sis234/grupo1/distance payload={"seq":1055,"cm":null}
+[t_ms=   477667] PUB              topic=sis234/grupo1/distance payload={"seq":1056,"cm":82.9}
+[t_ms=   478064] PUB              topic=sis234/grupo1/distance payload={"seq":1057,"cm":40.1}
+[t_ms=   478464] PUB              topic=sis234/grupo1/distance payload={"seq":1058,"cm":36.2}
+[t_ms=   478863] PUB              topic=sis234/grupo1/distance payload={"seq":1059,"cm":31.6}
+[t_ms=   479263] PUB              topic=sis234/grupo1/distance payload={"seq":1060,"cm":30.3}
+[t_ms=   479662] PUB              topic=sis234/grupo1/distance payload={"seq":1061,"cm":29.5}
+[t_ms=   480061] PUB              topic=sis234/grupo1/distance payload={"seq":1062,"cm":29.5}
+[t_ms=   480462] PUB              topic=sis234/grupo1/distance payload={"seq":1063,"cm":37.1}
+[t_ms=   480861] PUB              topic=sis234/grupo1/distance payload={"seq":1064,"cm":29.5}
+[t_ms=   481261] PUB              topic=sis234/grupo1/distance payload={"seq":1065,"cm":29.6}
+[t_ms=   481662] PUB              topic=sis234/grupo1/distance payload={"seq":1066,"cm":37.6}
+[t_ms=   482063] PUB              topic=sis234/grupo1/distance payload={"seq":1067,"cm":28.7}
+[t_ms=   482463] PUB              topic=sis234/grupo1/distance payload={"seq":1068,"cm":28.7}
+[t_ms=   482863] PUB              topic=sis234/grupo1/distance payload={"seq":1069,"cm":29.8}
+[t_ms=   483266] PUB              topic=sis234/grupo1/distance payload={"seq":1070,"cm":79.8}
+[t_ms=   483666] PUB              topic=sis234/grupo1/distance payload={"seq":1071,"cm":79.5}
+[t_ms=   484066] PUB              topic=sis234/grupo1/distance payload={"seq":1072,"cm":80.3}
+[t_ms=   484466] PUB              topic=sis234/grupo1/distance payload={"seq":1073,"cm":80.4}
+[t_ms=   484884] PUB              topic=sis234/grupo1/distance payload={"seq":1074,"cm":null}
+[t_ms=   485266] PUB              topic=sis234/grupo1/distance payload={"seq":1075,"cm":81.2}
+[t_ms=   485666] PUB              topic=sis234/grupo1/distance payload={"seq":1076,"cm":80.2}
+[t_ms=   486066] PUB              topic=sis234/grupo1/distance payload={"seq":1077,"cm":80.7}
+[t_ms=   486464] PUB              topic=sis234/grupo1/distance payload={"seq":1078,"cm":39.2}
+[t_ms=   486866] PUB              topic=sis234/grupo1/distance payload={"seq":1079,"cm":80.1}
+[t_ms=   487264] PUB              topic=sis234/grupo1/distance payload={"seq":1080,"cm":39.2}
+[t_ms=   487666] PUB              topic=sis234/grupo1/distance payload={"seq":1081,"cm":79.7}
+[t_ms=   488066] PUB              topic=sis234/grupo1/distance payload={"seq":1082,"cm":80.7}
+[t_ms=   488464] PUB              topic=sis234/grupo1/distance payload={"seq":1083,"cm":80.3}
+[t_ms=   488864] PUB              topic=sis234/grupo1/distance payload={"seq":1084,"cm":80.7}
+[t_ms=   489264] PUB              topic=sis234/grupo1/distance payload={"seq":1085,"cm":80.3}
+[t_ms=   489664] PUB              topic=sis234/grupo1/distance payload={"seq":1086,"cm":80.3}
+[t_ms=   490064] PUB              topic=sis234/grupo1/distance payload={"seq":1087,"cm":80.3}
+[t_ms=   490466] PUB              topic=sis234/grupo1/distance payload={"seq":1088,"cm":80.5}
+[t_ms=   490866] PUB              topic=sis234/grupo1/distance payload={"seq":1089,"cm":82.4}
+[t_ms=   491264] PUB              topic=sis234/grupo1/distance payload={"seq":1090,"cm":83.1}
+[t_ms=   491665] PUB              topic=sis234/grupo1/distance payload={"seq":1091,"cm":85.3}
+[t_ms=   492065] PUB              topic=sis234/grupo1/distance payload={"seq":1092,"cm":90.3}
+[t_ms=   492467] PUB              topic=sis234/grupo1/distance payload={"seq":1093,"cm":89.6}
+[t_ms=   492868] PUB              topic=sis234/grupo1/distance payload={"seq":1094,"cm":89.0}
+[t_ms=   493267] PUB              topic=sis234/grupo1/distance payload={"seq":1095,"cm":88.6}
+[t_ms=   493667] PUB              topic=sis234/grupo1/distance payload={"seq":1096,"cm":88.3}
+[t_ms=   494067] PUB              topic=sis234/grupo1/distance payload={"seq":1097,"cm":88.8}
+[t_ms=   494467] PUB              topic=sis234/grupo1/distance payload={"seq":1098,"cm":88.7}
+[t_ms=   494867] PUB              topic=sis234/grupo1/distance payload={"seq":1099,"cm":88.8}
+[t_ms=   495267] PUB              topic=sis234/grupo1/distance payload={"seq":1100,"cm":88.5}
+[t_ms=   495667] PUB              topic=sis234/grupo1/distance payload={"seq":1101,"cm":88.5}

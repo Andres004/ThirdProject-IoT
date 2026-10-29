@@ -1,0 +1,24 @@
+RNF3 response time test - 2026-10-29 15:40:53
+Broker broker.hivemq.com:1883, LED red, 20 commands, timeout 3.0 s
+#1 state=on time_ms=542.3
+#2 state=off time_ms=550.3
+#3 state=on time_ms=543.5
+#4 state=off time_ms=603.1
+#5 state=on time_ms=593.5
+#6 state=off time_ms=600.9
+#7 state=on time_ms=597.7
+#8 state=off time_ms=594.0
+#9 state=on time_ms=599.7
+#10 state=off time_ms=653.2
+#11 state=on time_ms=553.2
+#12 state=off time_ms=587.5
+#13 state=on time_ms=600.7
+#14 state=off time_ms=749.8
+#15 state=on time_ms=542.2
+#16 state=off time_ms=547.3
+#17 state=on time_ms=558.1
+#18 state=off time_ms=597.6
+#19 state=on time_ms=571.0
+#20 state=off time_ms=601.0
+Summary: n=20 lost=0 min=542.2 ms mean=589.3 ms p95=658.0 ms max=749.8 ms
+RNF3 response_time max=749.8 ms limit=1000 ms -> PASS

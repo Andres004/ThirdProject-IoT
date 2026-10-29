@@ -1,0 +1,11 @@
+RNF4 publish rate test - 2026-10-29 15:39:40
+Broker broker.hivemq.com:1883, topic sis234/grupo1/distance, 60 s in windows of 10 s
+window #1 readings=26 rate=2.60/s
+window #2 readings=25 rate=2.50/s
+window #3 readings=25 rate=2.50/s
+window #4 readings=25 rate=2.50/s
+window #5 readings=25 rate=2.50/s
+window #6 readings=25 rate=2.50/s
+Summary: total=151 nulls=150 malformed=0 seq_gaps=0 seq_resets=0
+Window resolution: 0.10/s (one message per 10 s window)
+RNF4 publish_rate min=2.50/s mean=2.50/s limit=2.0/s -> PASS

@@ -1,0 +1,7 @@
+RNF5 reconnection analysis - 2026-10-29 17:28:53
+Log: serial_log.txt
+#1 cause=MQTT_LOST at t_ms=195316 outage=131.1 s mqtt_after_wifi=0.7 s recovered
+#2 cause=WIFI_LOST at t_ms=343936 outage=10.9 s mqtt_after_wifi=0.6 s recovered
+#3 cause=MQTT_LOST at t_ms=369452 outage=106.2 s mqtt_after_wifi=0.6 s recovered
+Summary: drops=3 recovered=3 failed=0
+RNF5 reconnection drops=3 max_outage=131.1 s max_mqtt_after_wifi=0.7 s -> PASS
