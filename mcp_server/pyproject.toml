@@ -1,0 +1,24 @@
+[project]
+name = "sis234-g1-mcp"
+version = "0.1.0"
+description = "MCP server that bridges Claude Desktop with the SIS-234 group 1 smart object over MQTT"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=2.3.0",
+    "paho-mqtt>=2.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "flake8>=7.0",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
