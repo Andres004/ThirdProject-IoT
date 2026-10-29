@@ -10,7 +10,7 @@ import os
 MQTT_HOST: str = os.environ.get("MQTT_HOST", "broker.hivemq.com")
 MQTT_PORT: int = int(os.environ.get("MQTT_PORT", "1883"))  # TCP port without TLS
 MQTT_KEEPALIVE_S: int = 15  # Seconds between pings; same value as the smart object
-MQTT_CLIENT_ID: str = "sis234-g1-mcp"  # Must be unique on the broker
+MQTT_CLIENT_ID_PREFIX: str = "sis234-g1-mcp"  # The process ID is appended to keep it unique
 MQTT_RECONNECT_MIN_DELAY_S: int = 1  # First wait before retrying a lost connection
 MQTT_RECONNECT_MAX_DELAY_S: int = 30  # Upper bound for the exponential retry wait
 
@@ -31,12 +31,18 @@ STATUS_ONLINE: str = "online"
 STATUS_OFFLINE: str = "offline"
 LED_NAMES: tuple[str, ...] = ("red", "yellow", "white")  # Individual LEDs on the smart object
 LED_ALL: str = "all"  # Pseudo LED name that targets the three LEDs at once
-LED_STATES: tuple[str, ...] = ("on", "off")
+LED_STATE_ON: str = "on"
+LED_STATE_OFF: str = "off"
+LED_STATES: tuple[str, ...] = (LED_STATE_ON, LED_STATE_OFF)
+LED_LEVEL_ON: int = 1  # Value of a lit LED in the leds/state payload
+LED_LEVEL_OFF: int = 0  # Value of a dark LED in the leds/state payload
 CMD_MAX_LENGTH_BYTES: int = 64  # The smart object rejects longer command payloads
 
 # Timing rules for the MCP tools.
 CONFIRM_TIMEOUT_S: float = 3.0  # Max wait for leds/state after publishing a command
 MAX_READING_AGE_S: float = 5.0  # A distance older than this is reported as stale (10 periods)
+AGE_DECIMALS: int = 1  # Decimals shown for ages in seconds
+MS_PER_S: int = 1000  # Converts seconds to milliseconds
 
 # Logging (always to stderr; stdout carries the MCP protocol).
 LOG_FORMAT: str = "%(asctime)s %(levelname)s [%(name)s] %(message)s"

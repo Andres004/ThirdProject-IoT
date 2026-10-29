@@ -2,6 +2,7 @@
 
 import json
 import logging
+import os
 import threading
 import time
 from dataclasses import dataclass
@@ -31,7 +32,9 @@ class MqttBridge:
 
     The paho network loop runs in a background thread, so every cached value is
     protected by one lock. A condition on that lock lets set_led() wait until the
-    smart object confirms a command on the LED state topic.
+    smart object confirms a command on the LED state topic. The client ID ends with
+    the process ID, so two server instances (e.g. two started by Claude Desktop, or
+    one started by hand) never kick each other off the broker.
     """
 
     def __init__(self) -> None:
@@ -43,9 +46,8 @@ class MqttBridge:
         self._led_state: Stamped | None = None
         self._status: Stamped | None = None
 
-        self._client = mqtt.Client(
-            mqtt.CallbackAPIVersion.VERSION2, client_id=config.MQTT_CLIENT_ID
-        )
+        self._client_id = f"{config.MQTT_CLIENT_ID_PREFIX}-{os.getpid()}"
+        self._client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id=self._client_id)
         self._client.on_connect = self._on_connect
         self._client.on_disconnect = self._on_disconnect
         self._client.on_message = self._on_message
@@ -57,7 +59,7 @@ class MqttBridge:
     def start(self) -> None:
         """Start connecting in the background; paho keeps retrying if the broker is down."""
         logger.info("Connecting to %s:%d as %s",
-                    config.MQTT_HOST, config.MQTT_PORT, config.MQTT_CLIENT_ID)
+                    config.MQTT_HOST, config.MQTT_PORT, self._client_id)
         self._client.connect_async(config.MQTT_HOST, config.MQTT_PORT, config.MQTT_KEEPALIVE_S)
         self._client.loop_start()
 
@@ -88,8 +90,11 @@ class MqttBridge:
             return self._status
 
     def send_led_command(self, led: str, state: str) -> bool:
-        """Publish one LED command with QoS 1; return False if paho rejected it."""
+        """Publish one LED command with QoS 1; return False if too long or rejected."""
         payload = json.dumps({"led": led, "state": state}, separators=(",", ":"))
+        if len(payload.encode("utf-8")) > config.CMD_MAX_LENGTH_BYTES:
+            logger.error("Command too long, not sent: %s", payload)
+            return False
         info = self._client.publish(config.TOPIC_LEDS_CMD, payload, qos=config.QOS_LEDS_CMD)
         if info.rc != mqtt.MQTT_ERR_SUCCESS:
             logger.error("Publish failed on %s: %s", config.TOPIC_LEDS_CMD,

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "sis234-g1-smart-object": {
+      "command": "C:\\Users\\<WINDOWS_USER>\\.local\\bin\\uv.exe",
+      "args": [
+        "--directory",
+        "C:\\<PATH_TO_REPO>\\ThirdProject-IoT\\mcp_server",
+        "run",
+        "server.py"
+      ]
+    }
+  }
+}

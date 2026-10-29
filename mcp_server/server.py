@@ -50,7 +50,7 @@ def get_distance() -> dict[str, Any]:
     result: dict[str, Any] = {
         "cm": reading.value["cm"],
         "seq": reading.value["seq"],
-        "age_s": round(reading.age_s(), 1),
+        "age_s": round(reading.age_s(), config.AGE_DECIMALS),
         "online": online,
     }
     if online is False:
@@ -67,10 +67,8 @@ def get_distance() -> dict[str, Any]:
 def set_led(led: str, state: str) -> dict[str, Any]:
     """Turn one LED of the smart object on or off and wait for the device to confirm it.
 
-    Args:
-        led: "red", "yellow", "white", or "all" for the three LEDs at once.
-        state: "on" or "off".
-
+    The led argument is "red", "yellow", "white", or "all" for the three LEDs at once.
+    The state argument is "on" or "off".
     For combined requests, call this tool several times. Example: "turn on the red LED
     and turn off the others" -> set_led("all", "off") and then set_led("red", "on").
     Returns a dict with ok (true/false), the confirmed LED state reported by the device
@@ -90,7 +88,8 @@ def set_led(led: str, state: str) -> dict[str, Any]:
         return {"ok": False, "error": "The smart object is offline; the command was not sent."}
 
     target_leds = config.LED_NAMES if led == config.LED_ALL else (led,)
-    expected = {name: 1 if state == "on" else 0 for name in target_leds}
+    level = config.LED_LEVEL_ON if state == config.LED_STATE_ON else config.LED_LEVEL_OFF
+    expected = {name: level for name in target_leds}
     sent_at = time.monotonic()
     if not bridge.send_led_command(led, state):
         return {"ok": False, "error": "The command could not be published to the broker."}
@@ -101,7 +100,7 @@ def set_led(led: str, state: str) -> dict[str, Any]:
                 "error": (f"No confirmation from the smart object within "
                           f"{config.CONFIRM_TIMEOUT_S} s; the LED may not have changed.")}
     return {"ok": True, "leds": confirmed.value,
-            "confirm_ms": round((confirmed.received_at - sent_at) * 1000)}
+            "confirm_ms": round((confirmed.received_at - sent_at) * config.MS_PER_S)}
 
 
 @mcp.tool()
@@ -121,7 +120,7 @@ def get_status() -> dict[str, Any]:
         "broker_connected": bridge.is_broker_connected(),
         "smart_object": status.value if status else "unknown",
         "leds": leds.value if leds else None,
-        "leds_age_s": round(leds.age_s(), 1) if leds else None,
+        "leds_age_s": round(leds.age_s(), config.AGE_DECIMALS) if leds else None,
     }
 
 
