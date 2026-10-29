@@ -5,7 +5,7 @@ Miden los requisitos no funcionales con el ESP32 real. No simulan datos: si falt
 | Script | Requisito | Fuente | Qué mide |
 |---|---|---|---|
 | `analyze_stability.py` | RNF1 | Log del monitor serie | Duración sin reinicios, `WIFI_LOST`/`MQTT_LOST`, huecos de `seq` y la pausa más larga entre dos `PUB` de distancia (una pausa larga indica un bloqueo). |
-| `analyze_accuracy.py` | RNF2 | Tópico `distance` | Error frente a una regla en 5, 10, 20, 50, 100, 150 y 200 cm (10 lecturas válidas en cada una) y el rango de trabajo donde se cumple ±3 cm. |
+| `analyze_accuracy.py` | RNF2 | Tópico `distance` | Error frente a una regla en varias distancias de referencia (10 lecturas válidas en cada una) y el rango de trabajo donde se cumple ±3 cm. |
 | `measure_response_time.py` | RNF3 | Tópicos `leds/cmd` y `leds/state` | Tiempo desde publicar un comando hasta recibir el `leds/state` que lo confirma (ida y vuelta PC → broker → OI → broker → PC). |
 | `measure_publish_rate.py` | RNF4 | Tópico `distance` | Lecturas por segundo en ventanas de 10 s, más los huecos de `seq` y las lecturas `null`. |
 | `analyze_reconnection.py` | RNF5 | Log del monitor serie | En cada caída, el tiempo desde `WIFI_LOST`/`MQTT_LOST` hasta `MQTT_CONNECTED` y si hubo un reinicio en medio. |

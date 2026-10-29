@@ -1,0 +1,13 @@
+RNF2 accuracy test - 2026-10-29 17:31:49
+Broker broker.hivemq.com:1883, 10 valid readings per distance, limit 3.0 cm
+ref=5 cm n=10 nulls=0 mean=4.05 cm mean_error=-0.95 cm max_error=1.70 cm stdev=0.56 cm OK
+ref=10 cm n=10 nulls=0 mean=10.52 cm mean_error=+0.52 cm max_error=0.60 cm stdev=0.04 cm OK
+ref=20 cm n=10 nulls=0 mean=20.20 cm mean_error=+0.20 cm max_error=1.10 cm stdev=0.47 cm OK
+ref=50 cm n=10 nulls=0 mean=47.94 cm mean_error=-2.06 cm max_error=19.70 cm stdev=6.20 cm OUT
+ref=100 cm n=10 nulls=9 mean=100.63 cm mean_error=+0.63 cm max_error=26.60 cm stdev=12.53 cm OUT
+ref=150 cm: skipped
+ref=200 cm n=10 nulls=0 mean=36.82 cm mean_error=-163.18 cm max_error=168.90 cm stdev=2.85 cm OUT
+Outside the working range: 50 cm (max error 19.70 cm)
+Outside the working range: 100 cm (max error 26.60 cm)
+Outside the working range: 200 cm (max error 168.90 cm)
+RNF2 accuracy max_error=1.70 cm range=5-20 cm limit=3.0 cm -> PASS

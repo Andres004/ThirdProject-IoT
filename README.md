@@ -69,7 +69,7 @@ IoT MQTT Panel con un gauge y un gráfico de línea sobre `distance` (JSONPath `
 | Requisito | Referencia | Valor medido | Método | Evidencia |
 |---|---|---|---|---|
 | RNF1 Estabilidad | ≥ 10 min | **39.3 min** (2356.1 s) sin reinicios ni caídas; pausa máxima entre publicaciones 423 ms → PASS | Log del monitor serie analizado con `tools/analyze_stability.py` | [`RNF1`](docs/evidencias/RNF1/) |
-| RNF2 Exactitud | ≤ ±3 cm | Pendiente de medición | `tools/analyze_accuracy.py` contra una regla | — |
+| RNF2 Exactitud | ≤ ±3 cm | **Rango de trabajo 5–20 cm: error máximo 1.70 cm** (10 lecturas por distancia) → PASS | `tools/analyze_accuracy.py` contra una regla, con un libro plano | [`RNF2`](docs/evidencias/RNF2/) |
 | RNF3 Tiempo de respuesta | ≤ 1 s | **máx. 749.8 ms**, media 589.3 ms, 20/20 comandos confirmados → PASS | `tools/measure_response_time.py`: ida y vuelta PC → broker → OI → broker → PC, cota superior del camino app → broker → OI | [`RNF3`](docs/evidencias/RNF3/) |
 | RNF4 Frecuencia | ≥ 2 lecturas/s | **2.50 lecturas/s** (mínimo y media en 6 ventanas de 10 s), 0 huecos de `seq` → PASS | `tools/measure_publish_rate.py` | [`RNF4`](docs/evidencias/RNF4/) |
 | RNF5 Reconexión | Automática | **3/3 caídas recuperadas sin reinicio**; MQTT vuelve en **≤ 0.7 s** después de que vuelve el WiFi → PASS (las interrupciones totales, 10.9–131.1 s, incluyen el tiempo con el hotspot apagado) | 3 cortes del hotspot con el ESP32 encendido, log analizado con `tools/analyze_reconnection.py` | [`RNF5`](docs/evidencias/RNF5/) |
