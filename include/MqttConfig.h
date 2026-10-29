@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stddef.h>
 #include <stdint.h>
 
 /// MQTT contract shared by the smart object, the mobile app and the MCP server.
@@ -12,8 +13,10 @@ constexpr char BROKER_HOST[] = "broker.hivemq.com";
 constexpr uint16_t BROKER_PORT = 1883;            // Plain TCP (no TLS) on the public broker
 constexpr uint16_t KEEPALIVE_S = 15;              // Broker declares us dead after 1.5 x this
 constexpr uint16_t SOCKET_TIMEOUT_S = 2;          // Max wait for a network read inside PubSubClient
+constexpr uint32_t CONNECT_TIMEOUT_S = 2;         // Max wait for the TCP connect to the broker
 constexpr uint16_t BUFFER_SIZE_BYTES = 256;       // Largest MQTT packet we send or accept
 constexpr char CLIENT_ID_PREFIX[] = "sis234-g1-oi-";  // + MAC address = unique client id
+constexpr size_t CLIENT_ID_BUFFER_BYTES = 32;     // Prefix + 12 hex digits + terminator
 
 // Every topic starts with the group prefix so we do not collide with other groups.
 constexpr char TOPIC_DISTANCE[] = "sis234/grupo1/distance";    // OI -> app, MCP
