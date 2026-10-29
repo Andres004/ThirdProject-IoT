@@ -46,6 +46,7 @@ constexpr char STATE_OFF[] = "off";
 constexpr uint8_t LED_LEVEL_ON = 1;               // Value of a lit LED in leds/state
 constexpr uint8_t LED_LEVEL_OFF = 0;              // Value of a dark LED in leds/state
 constexpr uint8_t DISTANCE_DECIMALS = 1;          // Decimals published for cm
+constexpr size_t PAYLOAD_BUFFER_BYTES = 64;       // Largest payload the smart object publishes
 
 constexpr unsigned int MAX_COMMAND_LENGTH = 64;   // Longer commands are rejected
 constexpr unsigned long MQTT_RETRY_INTERVAL_MS = 2000;

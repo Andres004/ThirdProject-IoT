@@ -2,6 +2,10 @@
 
 #include <stdarg.h>
 
+void EventLog::begin() {
+  Serial.begin(SERIAL_BAUD);
+}
+
 void EventLog::write(Event event, const char* format, ...) {
   char details[DETAILS_BUFFER_BYTES];
   va_list args;
