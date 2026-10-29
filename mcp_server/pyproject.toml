@@ -24,4 +24,4 @@ select = ["E", "W", "F", "I", "N", "D"]
 convention = "pep257"
 
 [tool.ruff.lint.isort]
-known-first-party = ["config", "mqtt_bridge", "report", "tools_config"]
+known-first-party = ["config", "mqtt_bridge", "report", "serial_log", "tools_config"]

@@ -60,6 +60,33 @@ MIN_COMPLETE_WINDOWS: int = 3  # Fewer complete windows than this is not enough 
 FIRST_READING_TIMEOUT_S: float = 10.0  # Max wait for the first distance after subscribing
 WINDOW_RESOLUTION_PER_S: float = 1 / RATE_WINDOW_S  # One message more or less in a window
 
+# RNF1: stability, read from a serial monitor log.
+MIN_STABILITY_DURATION_S: float = 600.0  # Requirement: at least 10 minutes without restarts
+MAX_PUBLISH_GAP_MS: float = 2000.0  # A longer pause between two distance PUBs is a freeze
+MIN_LOG_PUBLICATIONS: int = 2  # Fewer distance PUBs than this cannot show any pause
+
+# RNF2: accuracy against a ruler, measured live on the distance topic.
+CLIENT_ID_RNF2: str = "sis234-g1-tool-rnf2"
+REFERENCE_DISTANCES_CM: tuple[float, ...] = (5.0, 10.0, 20.0, 50.0, 100.0, 150.0, 200.0)
+SAMPLES_PER_DISTANCE: int = 10  # Valid readings taken at each reference distance
+SAMPLE_TIMEOUT_S: float = 30.0  # Max time to collect the readings of one distance
+MAX_ERROR_CM: float = 3.0  # Requirement limit for the error of any single reading
+MIN_RANGE_POINTS: int = 3  # A working range needs at least this many reference distances
+SKIP_ANSWER: str = "s"  # Typed at the prompt to skip a reference distance
+CM_DECIMALS: int = 2  # Decimals for distances and errors in cm
+
+# RNF5: automatic reconnection, read from a serial monitor log.
+MIN_RECONNECTION_DROPS: int = 3  # Fewer provoked drops than this is not enough data
+
+# Serial log of the smart object: "[t_ms=   123456] EVENT_NAME       details".
+LOG_LINE_PATTERN: str = r"\[t_ms=\s*(\d+)\]\s+([A-Z_]+)\s*(.*)"
+EVENT_BOOT: str = "BOOT"
+EVENT_PUB: str = "PUB"
+EVENT_WIFI_LOST: str = "WIFI_LOST"
+EVENT_WIFI_CONNECTED: str = "WIFI_CONNECTED"
+EVENT_MQTT_LOST: str = "MQTT_LOST"
+EVENT_MQTT_CONNECTED: str = "MQTT_CONNECTED"
+
 # Report format.
 RESULT_PASS: str = "PASS"
 RESULT_FAIL: str = "FAIL"
