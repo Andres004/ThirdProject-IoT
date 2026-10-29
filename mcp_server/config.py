@@ -21,7 +21,7 @@ TOPIC_LEDS_STATE: str = "sis234/grupo1/leds/state"
 TOPIC_STATUS: str = "sis234/grupo1/status"
 
 # QoS per topic, as declared in the protocol table.
-QOS_DISTANCE: int = 0  # Lost readings are acceptable; the next one arrives in 0.5 s
+QOS_DISTANCE: int = 0  # Lost readings are acceptable; the next one arrives in 0.4 s
 QOS_LEDS_CMD: int = 1  # A command must reach the broker at least once
 QOS_LEDS_STATE: int = 0  # PubSubClient on the ESP32 can only publish with QoS 0
 QOS_STATUS: int = 1  # The LWT is published by the broker with QoS 1
@@ -40,7 +40,7 @@ CMD_MAX_LENGTH_BYTES: int = 64  # The smart object rejects longer command payloa
 
 # Timing rules for the MCP tools.
 CONFIRM_TIMEOUT_S: float = 3.0  # Max wait for leds/state after publishing a command
-MAX_READING_AGE_S: float = 5.0  # A distance older than this is reported as stale (10 periods)
+MAX_READING_AGE_S: float = 5.0  # A distance older than this is reported as stale (12 periods)
 AGE_DECIMALS: int = 1  # Decimals shown for ages in seconds
 MS_PER_S: int = 1000  # Converts seconds to milliseconds
 
