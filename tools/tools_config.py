@@ -57,6 +57,8 @@ MIN_READINGS_PER_S: float = 2.0  # Requirement limit for the slowest window
 RATE_TEST_DURATION_S: float = 60.0  # Total listening time
 RATE_WINDOW_S: float = 10.0  # Length of each counting window
 MIN_COMPLETE_WINDOWS: int = 3  # Fewer complete windows than this is not enough data
+FIRST_READING_TIMEOUT_S: float = 10.0  # Max wait for the first distance after subscribing
+WINDOW_RESOLUTION_PER_S: float = 1 / RATE_WINDOW_S  # One message more or less in a window
 
 # Report format.
 RESULT_PASS: str = "PASS"
