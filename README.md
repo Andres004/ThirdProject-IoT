@@ -68,15 +68,15 @@ IoT MQTT Panel con un gauge y un gráfico de línea sobre `distance` (JSONPath `
 
 | Requisito | Referencia | Valor medido | Método | Evidencia |
 |---|---|---|---|---|
-| RNF1 Estabilidad | ≥ 10 min | **39.3 min** (2356.1 s) sin reinicios ni caídas; pausa máxima entre publicaciones 423 ms → PASS | Log del monitor serie analizado con `tools/analyze_stability.py` | [`RNF1`](docs/evidencias/RNF1/) |
+| RNF1 Estabilidad | ≥ 10 min | **12.9 min** (775.0 s) sin reinicios ni caídas de WiFi o MQTT, 775 lecturas con `seq` continuo → PASS | Log del monitor serie analizado con `tools/analyze_stability.py` | [`RNF1`](docs/evidencias/RNF1/) |
 | RNF2 Exactitud | ≤ ±3 cm | **Rango de trabajo 5–20 cm: error máximo 1.70 cm** (10 lecturas por distancia) → PASS | `tools/analyze_accuracy.py` contra una regla, con un libro plano | [`RNF2`](docs/evidencias/RNF2/) |
 | RNF3 Tiempo de respuesta | ≤ 1 s | **máx. 749.8 ms**, media 589.3 ms, 20/20 comandos confirmados → PASS | `tools/measure_response_time.py`: ida y vuelta PC → broker → OI → broker → PC, cota superior del camino app → broker → OI | [`RNF3`](docs/evidencias/RNF3/) |
-| RNF4 Frecuencia | 1 lectura/s (declarada) | Pendiente de nueva medición | `tools/measure_publish_rate.py` | [`RNF4`](docs/evidencias/RNF4/) |
+| RNF4 Frecuencia | 1 lectura/s (declarada) | **media 1.018 lecturas/s** en 60 s (mín. 0.9/s por ventana de 10 s), 0 huecos de `seq` → PASS | `tools/measure_publish_rate.py` suscrito a `distance` | [`RNF4`](docs/evidencias/RNF4/) |
 | RNF5 Reconexión | Automática | **3/3 caídas recuperadas sin reinicio**; MQTT vuelve en **≤ 0.7 s** después de que vuelve el WiFi → PASS (las interrupciones totales, 10.9–131.1 s, incluyen el tiempo con el hotspot apagado) | 3 cortes del hotspot con el ESP32 encendido, log analizado con `tools/analyze_reconnection.py` | [`RNF5`](docs/evidencias/RNF5/) |
 
 Frecuencia de publicación: 1 lectura/s (`SensorConfig::SAMPLE_PERIOD_MS = 1000`). El grupo define la frecuencia; 1 lectura/s es suficiente para el gráfico de la app y no satura el broker público.
 
-RNF1, RNF2, RNF3 y RNF5 se midieron el 29/10/2026 con el ESP32 real y el broker público, con un período de muestreo de 400 ms.
+Todas las mediciones se hicieron con el ESP32 real y el broker público. RNF1 y RNF4 se midieron el 03/11/2026 con el período actual de 1 s. RNF2, RNF3 y RNF5 se midieron el 29/10/2026 con un período de 400 ms; el período no afecta la exactitud del sensor, el camino de los comandos ni la reconexión.
 
 ## Ejecución
 
