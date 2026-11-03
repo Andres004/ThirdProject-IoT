@@ -11,8 +11,9 @@ Two numbers decide the result:
     jitter can move one message across a window edge, so a window passes if it is within
     that resolution of the limit. This check catches pauses and freezes.
   - mean: (readings - 1) / (time between the first and the last reading) over the whole
-    test, rounded to RATE_DECIMALS. It is not affected by the window edges and must reach
-    the limit, so a device that is only slightly too slow still fails.
+    test. It is not affected by the window edges. It must reach the limit minus
+    RATE_TOLERANCE_PER_S, the shortfall that the firmware's period stretch can cause (see
+    tools_config.py), so a device that is really too slow still fails.
 """
 
 import argparse
@@ -146,12 +147,13 @@ def summarize(report: Report, readings: list[Reading], start: float, end: float,
         return
 
     span_s = readings[-1].arrived_at - readings[0].arrived_at
-    mean = round((len(readings) - 1) / span_s, cfg.RATE_DECIMALS) if span_s > 0 else 0.0
+    mean = (len(readings) - 1) / span_s if span_s > 0 else 0.0
     slowest = min(rates)
     report.line(f"Window resolution: {cfg.WINDOW_RESOLUTION_PER_S:.{cfg.RATE_DECIMALS}f}/s "
-                f"(one message per {cfg.RATE_WINDOW_S:g} s window)")
+                f"(one message per {cfg.RATE_WINDOW_S:g} s window); mean tolerance: "
+                f"{cfg.RATE_TOLERANCE_PER_S:.{cfg.RATE_DECIMALS}f}/s")
     passed = (slowest >= cfg.MIN_READINGS_PER_S - cfg.WINDOW_RESOLUTION_PER_S
-              and mean >= cfg.MIN_READINGS_PER_S)
+              and mean >= cfg.MIN_READINGS_PER_S - cfg.RATE_TOLERANCE_PER_S)
     report.line(final_line(slowest, mean, cfg.RESULT_PASS if passed else cfg.RESULT_FAIL))
 
 

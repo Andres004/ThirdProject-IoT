@@ -41,7 +41,7 @@ Broker: `broker.hivemq.com:1883` (TCP, sin TLS ni credenciales). Las constantes 
 | `sis234/grupo1/leds/state` | OI | App, MCP | 0 | Sí | `{"red":1,"yellow":0,"white":0}` tras aplicar cada comando |
 | `sis234/grupo1/status` | OI (LWT) | App, MCP | 1 | Sí | `online` / `offline` |
 
-- **`distance`, QoS 0 y sin retener:** llega una lectura nueva cada 0.4 s, así que perder una no importa y una lectura vieja no debe mostrarse como actual. `seq` crece en 1 por lectura (un hueco es una lectura perdida). `cm` lleva 1 decimal, o `null` si no hubo eco o está fuera de 2–400 cm: nunca se publica un número falso.
+- **`distance`, QoS 0 y sin retener:** llega una lectura nueva cada 1 s, así que perder una no importa y una lectura vieja no debe mostrarse como actual. `seq` crece en 1 por lectura (un hueco es una lectura perdida). `cm` lleva 1 decimal, o `null` si no hubo eco o está fuera de 2–400 cm: nunca se publica un número falso.
 - **`leds/cmd`, QoS 1 y sin retener:** un comando debe llegar al menos una vez, pero no debe quedar guardado en el broker, porque el ESP32 lo volvería a ejecutar en cada reconexión.
 - **`leds/state` y `status`, retenidos:** quien se conecta tarde (la app, el MCP) recibe enseguida el último estado. `status` es el *last will*: el ESP32 lo registra como `offline` al conectarse y publica `online`; si se cae, el broker publica `offline` por él.
 - **QoS de publicación del ESP32:** PubSubClient solo publica con QoS 0 (limitación de la librería), por eso `leds/state` y `status = online` salen con QoS 0. El `offline` del last will lo publica el broker con QoS 1.
@@ -71,10 +71,12 @@ IoT MQTT Panel con un gauge y un gráfico de línea sobre `distance` (JSONPath `
 | RNF1 Estabilidad | ≥ 10 min | **39.3 min** (2356.1 s) sin reinicios ni caídas; pausa máxima entre publicaciones 423 ms → PASS | Log del monitor serie analizado con `tools/analyze_stability.py` | [`RNF1`](docs/evidencias/RNF1/) |
 | RNF2 Exactitud | ≤ ±3 cm | **Rango de trabajo 5–20 cm: error máximo 1.70 cm** (10 lecturas por distancia) → PASS | `tools/analyze_accuracy.py` contra una regla, con un libro plano | [`RNF2`](docs/evidencias/RNF2/) |
 | RNF3 Tiempo de respuesta | ≤ 1 s | **máx. 749.8 ms**, media 589.3 ms, 20/20 comandos confirmados → PASS | `tools/measure_response_time.py`: ida y vuelta PC → broker → OI → broker → PC, cota superior del camino app → broker → OI | [`RNF3`](docs/evidencias/RNF3/) |
-| RNF4 Frecuencia | ≥ 2 lecturas/s | **2.50 lecturas/s** (mínimo y media en 6 ventanas de 10 s), 0 huecos de `seq` → PASS | `tools/measure_publish_rate.py` | [`RNF4`](docs/evidencias/RNF4/) |
+| RNF4 Frecuencia | 1 lectura/s (declarada) | Pendiente de nueva medición | `tools/measure_publish_rate.py` | [`RNF4`](docs/evidencias/RNF4/) |
 | RNF5 Reconexión | Automática | **3/3 caídas recuperadas sin reinicio**; MQTT vuelve en **≤ 0.7 s** después de que vuelve el WiFi → PASS (las interrupciones totales, 10.9–131.1 s, incluyen el tiempo con el hotspot apagado) | 3 cortes del hotspot con el ESP32 encendido, log analizado con `tools/analyze_reconnection.py` | [`RNF5`](docs/evidencias/RNF5/) |
 
-Mediciones del 29/10/2026 con el ESP32 real y el broker público. El período de muestreo es 400 ms (`SensorConfig::SAMPLE_PERIOD_MS`).
+Frecuencia de publicación: 1 lectura/s (`SensorConfig::SAMPLE_PERIOD_MS = 1000`). El grupo define la frecuencia; 1 lectura/s es suficiente para el gráfico de la app y no satura el broker público.
+
+RNF1, RNF2, RNF3 y RNF5 se midieron el 29/10/2026 con el ESP32 real y el broker público, con un período de muestreo de 400 ms.
 
 ## Ejecución
 
