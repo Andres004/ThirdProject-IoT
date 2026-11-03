@@ -1,5 +1,6 @@
 #include "MqttLink.h"
 
+#include <lwip/dns.h>
 #include <string.h>
 
 #include "EventLog.h"
@@ -21,7 +22,6 @@ void MqttLink::begin(CommandHandler onCommand, ConnectedHandler onConnected) {
            MqttConfig::CLIENT_ID_PREFIX, mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
 
   wifiClient_.setTimeout(MqttConfig::CONNECT_TIMEOUT_S);
-  mqttClient_.setServer(MqttConfig::BROKER_HOST, MqttConfig::BROKER_PORT);
   mqttClient_.setKeepAlive(MqttConfig::KEEPALIVE_S);
   mqttClient_.setSocketTimeout(MqttConfig::SOCKET_TIMEOUT_S);
   mqttClient_.setBufferSize(MqttConfig::BUFFER_SIZE_BYTES);
@@ -38,7 +38,10 @@ void MqttLink::loop() {
   mqttClient_.loop();
   if (ensureWifi()) {
     ensureMqtt();
-  } else if (mqttUp_) {
+    return;
+  }
+  dnsPending_ = false;
+  if (mqttUp_) {
     mqttUp_ = false;
     EventLog::write(Event::MqttLost, "reason=wifi_lost");
   }
@@ -98,28 +101,67 @@ void MqttLink::ensureMqtt() {
     mqttUp_ = false;
     EventLog::write(Event::MqttLost, "state=%d", mqttClient_.state());
   }
-  const unsigned long nowMs = millis();
-  if (mqttAttemptNow_ || nowMs - lastMqttAttemptMs_ >= MqttConfig::MQTT_RETRY_INTERVAL_MS) {
+  if (dnsPending_) {
+    checkDnsLookup();
+    return;
+  }
+  if (mqttAttemptNow_ || millis() - lastMqttAttemptMs_ >= MqttConfig::MQTT_RETRY_INTERVAL_MS) {
     mqttAttemptNow_ = false;
-    connectMqtt();
+    startDnsLookup();
+  }
+}
+
+void MqttLink::startDnsLookup() {
+  EventLog::write(Event::MqttConnecting, "host=%s port=%u",
+                  MqttConfig::BROKER_HOST, MqttConfig::BROKER_PORT);
+  dnsStartMs_ = millis();
+  dnsDone_.store(false);
+  ip_addr_t address;
+  const err_t result = dns_gethostbyname(MqttConfig::BROKER_HOST, &address, onDnsFound, this);
+  if (result == ERR_OK) {
+    connectMqtt(IPAddress(address.u_addr.ip4.addr), 0);
+  } else if (result == ERR_INPROGRESS) {
+    dnsPending_ = true;
+  } else {
+    EventLog::write(Event::MqttRetry, "reason=dns_error err=%d", static_cast<int>(result));
     lastMqttAttemptMs_ = millis();
   }
 }
 
-void MqttLink::connectMqtt() {
-  EventLog::write(Event::MqttConnecting, "host=%s port=%u",
-                  MqttConfig::BROKER_HOST, MqttConfig::BROKER_PORT);
+void MqttLink::checkDnsLookup() {
+  const unsigned long dnsMs = millis() - dnsStartMs_;
+  if (dnsDone_.load()) {
+    dnsPending_ = false;
+    const uint32_t brokerIp = dnsResultIp_.load();
+    if (brokerIp == 0) {
+      EventLog::write(Event::MqttRetry, "reason=dns_failed dns_ms=%lu", dnsMs);
+      lastMqttAttemptMs_ = millis();
+      return;
+    }
+    connectMqtt(IPAddress(brokerIp), dnsMs);
+  } else if (dnsMs >= MqttConfig::DNS_TIMEOUT_MS) {
+    dnsPending_ = false;
+    EventLog::write(Event::MqttRetry, "reason=dns_timeout dns_ms=%lu", dnsMs);
+    lastMqttAttemptMs_ = millis();
+  }
+}
+
+void MqttLink::connectMqtt(const IPAddress& brokerIp, unsigned long dnsMs) {
+  mqttClient_.setServer(brokerIp, MqttConfig::BROKER_PORT);
   const unsigned long startMs = millis();
   const bool connected = mqttClient_.connect(clientId_, MqttConfig::TOPIC_STATUS,
                                              MqttConfig::STATUS_WILL_QOS, MqttConfig::RETAIN,
                                              MqttConfig::STATUS_OFFLINE);
-  const unsigned long tookMs = millis() - startMs;
+  const unsigned long connectMs = millis() - startMs;
+  lastMqttAttemptMs_ = millis();
   if (!connected) {
-    EventLog::write(Event::MqttRetry, "state=%d took_ms=%lu", mqttClient_.state(), tookMs);
+    EventLog::write(Event::MqttRetry, "state=%d ip=%s dns_ms=%lu connect_ms=%lu",
+                    mqttClient_.state(), brokerIp.toString().c_str(), dnsMs, connectMs);
     return;
   }
   mqttUp_ = true;
-  EventLog::write(Event::MqttConnected, "took_ms=%lu", tookMs);
+  EventLog::write(Event::MqttConnected, "ip=%s dns_ms=%lu connect_ms=%lu",
+                  brokerIp.toString().c_str(), dnsMs, connectMs);
   mqttClient_.subscribe(MqttConfig::TOPIC_LED_COMMAND, MqttConfig::COMMAND_SUBSCRIBE_QOS);
   publish(MqttConfig::TOPIC_STATUS, MqttConfig::STATUS_ONLINE, MqttConfig::RETAIN);
   if (onConnected_ != nullptr) {
@@ -132,4 +174,11 @@ void MqttLink::handleMessage(char* topic, uint8_t* payload, unsigned int length)
     return;
   }
   onCommand_(reinterpret_cast<const char*>(payload), length);
+}
+
+void MqttLink::onDnsFound(const char* name, const ip_addr_t* address, void* arg) {
+  (void)name;
+  MqttLink* link = static_cast<MqttLink*>(arg);
+  link->dnsResultIp_.store(address != nullptr ? address->u_addr.ip4.addr : 0);
+  link->dnsDone_.store(true);
 }

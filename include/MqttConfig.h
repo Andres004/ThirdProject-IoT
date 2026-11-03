@@ -8,12 +8,14 @@
 namespace MqttConfig {
 
 // Public HiveMQ broker: no user/password, so it is not a secret.
-// The hostname is used (never a fixed IP) because the broker IP can change.
+// The hostname is used (never a fixed IP) because the broker IP can change: it is resolved
+// again, without blocking, before every connection attempt.
 constexpr char BROKER_HOST[] = "broker.hivemq.com";
 constexpr uint16_t BROKER_PORT = 1883;            // Plain TCP (no TLS) on the public broker
 constexpr uint16_t KEEPALIVE_S = 15;              // Broker declares us dead after 1.5 x this
 constexpr uint16_t SOCKET_TIMEOUT_S = 2;          // Max wait for a network read inside PubSubClient
 constexpr uint32_t CONNECT_TIMEOUT_S = 2;         // Max wait for the TCP connect to the broker
+constexpr unsigned long DNS_TIMEOUT_MS = 15000;   // Give up a DNS lookup (lwIP stops at ~14 s)
 constexpr uint16_t BUFFER_SIZE_BYTES = 256;       // Largest MQTT packet we send or accept
 constexpr char CLIENT_ID_PREFIX[] = "sis234-g1-oi-";  // + MAC address = unique client id
 constexpr size_t CLIENT_ID_BUFFER_BYTES = 32;     // Prefix + 12 hex digits + terminator
