@@ -30,6 +30,20 @@ flowchart LR
 | `tools/` | Scripts que miden los requisitos no funcionales. |
 | `docs/evidencias/` | Salidas de las mediciones. |
 
+## Firmware
+
+Una clase por responsabilidad; todas las constantes están en `include/` (`SensorConfig.h`, `LedConfig.h`, `MqttConfig.h` y `Secrets.h`, que no se sube al repositorio).
+
+| Archivo | Responsabilidad |
+|---|---|
+| `src/UltrasonicSensor` | Mide la distancia con una máquina de estados (`Idle → Trigger → WaitEcho`): pulso TRIG de 10 µs medido con `micros()` y eco medido por interrupción. Sin eco o fuera de 2–400 cm devuelve `NAN` (se publica `null`). |
+| `src/LedController` | Enciende y apaga los LEDs según los comandos. Sin conexión al broker pasa a modo ERROR: los tres parpadean a 2 Hz con `millis()`. |
+| `src/MqttLink` | WiFi y MQTT con reintentos no bloqueantes (WiFi cada 10 s, MQTT cada 2 s), *last will* y suscripción en cada conexión. Resuelve el hostname del broker con el DNS asíncrono de lwIP, así el `loop()` sigue midiendo aunque no haya internet. |
+| `src/EventLog` | Log serie con formato fijo `[t_ms=...] EVENTO detalles`, que leen los scripts de `tools/`. |
+| `src/main.cpp` | Une todo: mide cada 1 s, publica `distance`, valida los comandos con ArduinoJson y publica `leds/state`. |
+
+El `loop()` no usa `delay()` ni `pulseIn()`. La única espera es la conexión al broker, acotada a 2 s para el TCP y 2 s para la respuesta del broker.
+
 ## Protocolo MQTT
 
 Broker: `broker.hivemq.com:1883` (TCP, sin TLS ni credenciales). Las constantes están en `include/MqttConfig.h` y `mcp_server/config.py`, y coinciden.
@@ -70,13 +84,13 @@ IoT MQTT Panel con un gauge y un gráfico de línea sobre `distance` (JSONPath `
 |---|---|---|---|---|
 | RNF1 Estabilidad | ≥ 10 min | **13.1 min** (788.1 s) sin reinicios ni caídas de WiFi o MQTT, `seq` continuo → PASS | Log del monitor serie analizado con `tools/analyze_stability.py` | [`RNF1`](docs/evidencias/RNF1/) |
 | RNF2 Exactitud | ≤ ±3 cm | **Rango de trabajo 20–200 cm: error máximo 1.40 cm** (10 lecturas por distancia en 20, 50, 100, 150 y 200 cm) → PASS | `tools/analyze_accuracy.py` contra una cinta métrica, con una pared como objetivo | [`RNF2`](docs/evidencias/RNF2/) |
-| RNF3 Tiempo de respuesta | ≤ 1 s | **máx. 749.8 ms**, media 589.3 ms, 20/20 comandos confirmados → PASS | `tools/measure_response_time.py`: ida y vuelta PC → broker → OI → broker → PC, cota superior del camino app → broker → OI | [`RNF3`](docs/evidencias/RNF3/) |
+| RNF3 Tiempo de respuesta | ≤ 1 s | Ida y vuelta en 3 corridas de 20 comandos: **media 631–747 ms, 53/60 comandos en menos de 1 s, máx. 1597 ms**, 0 perdidos. No cumple el máximo de 1 s en todos los comandos: el ESP32 aplica cada comando en 1–5 ms y los picos vienen de la latencia de la red celular del hotspot | `tools/measure_response_time.py`: ida y vuelta PC → broker → OI → broker → PC (más exigente que app → broker → OI), cruzado con el log serie | [`RNF3`](docs/evidencias/RNF3/) |
 | RNF4 Frecuencia | 1 lectura/s (declarada) | **media 1.018 lecturas/s** en 60 s (mín. 0.9/s por ventana de 10 s), 0 huecos de `seq` → PASS | `tools/measure_publish_rate.py` suscrito a `distance` | [`RNF4`](docs/evidencias/RNF4/) |
 | RNF5 Reconexión | Automática | **3/3 caídas recuperadas sin reinicio**; MQTT vuelve en **≤ 1.1 s** después de que vuelve el WiFi → PASS. Sin bloqueos durante la caída: pausa máxima entre lecturas 1395 ms (período 1000 ms). Las interrupciones totales (~131 s) incluyen el tiempo sin red | 2 cortes del hotspot y 1 sin datos móviles (broker inalcanzable), log analizado con `tools/analyze_reconnection.py` | [`RNF5`](docs/evidencias/RNF5/) |
 
 Frecuencia de publicación: 1 lectura/s (`SensorConfig::SAMPLE_PERIOD_MS = 1000`). El grupo define la frecuencia; 1 lectura/s es suficiente para el gráfico de la app y no satura el broker público.
 
-Todas las mediciones se hicieron con el ESP32 real y el broker público. RNF1, RNF2, RNF4 y RNF5 se midieron el 03/11/2026 con el período actual de 1 s y el firmware final. RNF3 se midió el 29/10/2026 con un período de 400 ms; el período no afecta el camino de los comandos.
+Todas las mediciones se hicieron el 03/11/2026 con el ESP32 real, el broker público, el período actual de 1 s y el firmware final.
 
 ## Ejecución
 
@@ -87,6 +101,8 @@ Copy-Item include\Secrets.example.h include\Secrets.h   # completar SSID y contr
 pio run -t upload
 pio device monitor
 ```
+
+Si `pio` no está en el PATH, se usan los botones *Upload* y *Monitor* de la extensión PlatformIO en VS Code. El monitor guarda cada sesión en `logs/` (filtro `log2file`).
 
 **Servidor MCP** (requiere [uv](https://docs.astral.sh/uv/)):
 
@@ -107,7 +123,7 @@ En Claude Desktop, *Settings → Developer → Edit Config*, agregar el bloque d
 |---|---|
 | HC-SR04 VCC | VIN (5 V) |
 | HC-SR04 TRIG | GPIO27 |
-| HC-SR04 ECHO | GPIO26, con divisor de tensión (5 V → 3.3 V) |
+| HC-SR04 ECHO | GPIO26, con divisor de tensión: 1 kΩ arriba y 2 × 1 kΩ abajo, 5 V × 2/3 ≈ 3.33 V (máximo del ESP32: 3.6 V) |
 | HC-SR04 GND | GND |
 | LED rojo | GPIO25 + 220 Ω |
 | LED amarillo | GPIO33 + 220 Ω |

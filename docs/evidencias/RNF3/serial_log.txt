@@ -1,0 +1,226 @@
+ets Jul 29 2019 12:21:46
+
+
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+
+configsip: 0, SPIWP:0xee
+
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+
+mode:DIO, clock div:2
+
+load:0x3fff0030,len:1184
+
+load:0x40078000,len:13232
+
+load:0x40080400,len:3028
+
+entry 0x400805e4
+
+[t_ms=       28] BOOT             reset_reason=1
+[t_ms=      129] WIFI_CONNECTING  ssid=<hidden> client_id=sis234-g1-oi-B4BFE962350C
+[t_ms=     1004] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":1,"cm":16.7} reason=not_connected
+[t_ms=     1774] WIFI_CONNECTED   ip=172.20.10.2 rssi_dbm=-55
+[t_ms=     1775] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[t_ms=     4290] MQTT_RETRY       state=-4 ip=63.184.219.224 dns_ms=91 connect_ms=2422
+[t_ms=     4294] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":2,"cm":16.8} reason=not_connected
+[t_ms=     5293] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":3,"cm":16.8} reason=not_connected
+[t_ms=     6289] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[t_ms=     8688] MQTT_RETRY       state=-4 ip=63.184.219.224 dns_ms=0 connect_ms=2398
+[t_ms=     8692] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":4,"cm":16.8} reason=not_connected
+[t_ms=     9691] PUB_FAILED       topic=sis234/grupo1/distance payload={"seq":5,"cm":16.8} reason=not_connected
+[t_ms=    10687] MQTT_CONNECTING  host=broker.hivemq.com port=1883
+[t_ms=    11402] MQTT_CONNECTED   ip=63.184.219.224 dns_ms=0 connect_ms=714
+[t_ms=    11406] PUB              topic=sis234/grupo1/status payload=online
+[t_ms=    11406] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    11417] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    11432] PUB              topic=sis234/grupo1/distance payload={"seq":6,"cm":16.8}
+[t_ms=    12434] PUB              topic=sis234/grupo1/distance payload={"seq":7,"cm":16.8}
+[t_ms=    13434] PUB              topic=sis234/grupo1/distance payload={"seq":8,"cm":16.8}
+[t_ms=    14434] PUB              topic=sis234/grupo1/distance payload={"seq":9,"cm":16.8}
+[t_ms=    15434] PUB              topic=sis234/grupo1/distance payload={"seq":10,"cm":16.8}
+[t_ms=    16434] PUB              topic=sis234/grupo1/distance payload={"seq":11,"cm":16.8}
+[t_ms=    17434] PUB              topic=sis234/grupo1/distance payload={"seq":12,"cm":16.8}
+[t_ms=    18435] PUB              topic=sis234/grupo1/distance payload={"seq":13,"cm":16.8}
+[t_ms=    19434] PUB              topic=sis234/grupo1/distance payload={"seq":14,"cm":16.8}
+[t_ms=    20434] PUB              topic=sis234/grupo1/distance payload={"seq":15,"cm":16.8}
+[t_ms=    21434] PUB              topic=sis234/grupo1/distance payload={"seq":16,"cm":16.8}
+[t_ms=    22434] PUB              topic=sis234/grupo1/distance payload={"seq":17,"cm":16.8}
+[t_ms=    23434] PUB              topic=sis234/grupo1/distance payload={"seq":18,"cm":16.8}
+[t_ms=    24434] PUB              topic=sis234/grupo1/distance payload={"seq":19,"cm":16.8}
+[t_ms=    25434] PUB              topic=sis234/grupo1/distance payload={"seq":20,"cm":16.8}
+[t_ms=    26434] PUB              topic=sis234/grupo1/distance payload={"seq":21,"cm":16.8}
+[t_ms=    27434] PUB              topic=sis234/grupo1/distance payload={"seq":22,"cm":16.8}
+[t_ms=    28434] PUB              topic=sis234/grupo1/distance payload={"seq":23,"cm":16.8}
+[t_ms=    29434] PUB              topic=sis234/grupo1/distance payload={"seq":24,"cm":16.8}
+[t_ms=    30436] PUB              topic=sis234/grupo1/distance payload={"seq":25,"cm":46.9}
+[t_ms=    31436] PUB              topic=sis234/grupo1/distance payload={"seq":26,"cm":45.7}
+[t_ms=    32437] PUB              topic=sis234/grupo1/distance payload={"seq":27,"cm":57.3}
+[t_ms=    33435] PUB              topic=sis234/grupo1/distance payload={"seq":28,"cm":25.3}
+[t_ms=    34437] PUB              topic=sis234/grupo1/distance payload={"seq":29,"cm":53.6}
+[t_ms=    35437] PUB              topic=sis234/grupo1/distance payload={"seq":30,"cm":57.1}
+[t_ms=    36437] PUB              topic=sis234/grupo1/distance payload={"seq":31,"cm":58.0}
+[t_ms=    37437] PUB              topic=sis234/grupo1/distance payload={"seq":32,"cm":56.9}
+[t_ms=    38437] PUB              topic=sis234/grupo1/distance payload={"seq":33,"cm":55.0}
+[t_ms=    39437] PUB              topic=sis234/grupo1/distance payload={"seq":34,"cm":57.2}
+[t_ms=    40456] PUB              topic=sis234/grupo1/distance payload={"seq":35,"cm":null}
+[t_ms=    41292] CMD_RX           led=red state=on
+[t_ms=    41292] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    41295] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    41435] PUB              topic=sis234/grupo1/distance payload={"seq":36,"cm":58.4}
+[t_ms=    42437] PUB              topic=sis234/grupo1/distance payload={"seq":37,"cm":57.0}
+[t_ms=    42812] CMD_RX           led=red state=off
+[t_ms=    42813] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    42816] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    43437] PUB              topic=sis234/grupo1/distance payload={"seq":38,"cm":55.4}
+[t_ms=    44365] CMD_RX           led=red state=on
+[t_ms=    44365] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    44368] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    44434] PUB              topic=sis234/grupo1/distance payload={"seq":39,"cm":57.2}
+[t_ms=    45437] PUB              topic=sis234/grupo1/distance payload={"seq":40,"cm":57.1}
+[t_ms=    45896] CMD_RX           led=red state=off
+[t_ms=    45897] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    45900] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    46435] PUB              topic=sis234/grupo1/distance payload={"seq":41,"cm":57.2}
+[t_ms=    47437] PUB              topic=sis234/grupo1/distance payload={"seq":42,"cm":52.9}
+[t_ms=    47632] CMD_RX           led=red state=on
+[t_ms=    47632] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    47633] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    48437] PUB              topic=sis234/grupo1/distance payload={"seq":43,"cm":55.5}
+[t_ms=    49437] PUB              topic=sis234/grupo1/distance payload={"seq":44,"cm":55.3}
+[t_ms=    49470] CMD_RX           led=red state=off
+[t_ms=    49471] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    49472] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    50437] PUB              topic=sis234/grupo1/distance payload={"seq":45,"cm":56.9}
+[t_ms=    51437] PUB              topic=sis234/grupo1/distance payload={"seq":46,"cm":56.9}
+[t_ms=    52033] CMD_RX           led=red state=on
+[t_ms=    52033] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    52036] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    52437] PUB              topic=sis234/grupo1/distance payload={"seq":47,"cm":63.9}
+[t_ms=    53437] PUB              topic=sis234/grupo1/distance payload={"seq":48,"cm":57.3}
+[t_ms=    53567] CMD_RX           led=red state=off
+[t_ms=    53567] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    53569] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    54437] PUB              topic=sis234/grupo1/distance payload={"seq":49,"cm":53.7}
+[t_ms=    55306] CMD_RX           led=red state=on
+[t_ms=    55307] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    55310] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    55435] PUB              topic=sis234/grupo1/distance payload={"seq":50,"cm":57.7}
+[t_ms=    56437] PUB              topic=sis234/grupo1/distance payload={"seq":51,"cm":57.3}
+[t_ms=    56877] CMD_RX           led=red state=off
+[t_ms=    56877] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    56880] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    57435] PUB              topic=sis234/grupo1/distance payload={"seq":52,"cm":56.9}
+[t_ms=    58435] PUB              topic=sis234/grupo1/distance payload={"seq":53,"cm":58.2}
+[t_ms=    58486] CMD_RX           led=red state=on
+[t_ms=    58486] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    58487] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    59437] PUB              topic=sis234/grupo1/distance payload={"seq":54,"cm":58.6}
+[t_ms=    60437] PUB              topic=sis234/grupo1/distance payload={"seq":55,"cm":60.8}
+[t_ms=    60543] CMD_RX           led=red state=off
+[t_ms=    60543] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    60545] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    61437] PUB              topic=sis234/grupo1/distance payload={"seq":56,"cm":59.4}
+[t_ms=    62398] CMD_RX           led=red state=on
+[t_ms=    62398] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    62401] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    62434] PUB              topic=sis234/grupo1/distance payload={"seq":57,"cm":57.2}
+[t_ms=    63437] PUB              topic=sis234/grupo1/distance payload={"seq":58,"cm":58.5}
+[t_ms=    63913] CMD_RX           led=red state=off
+[t_ms=    63913] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    63917] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    64437] PUB              topic=sis234/grupo1/distance payload={"seq":59,"cm":97.2}
+[t_ms=    65437] PUB              topic=sis234/grupo1/distance payload={"seq":60,"cm":57.1}
+[t_ms=    65556] CMD_RX           led=red state=on
+[t_ms=    65557] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    65558] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    66437] PUB              topic=sis234/grupo1/distance payload={"seq":61,"cm":58.0}
+[t_ms=    67287] CMD_RX           led=red state=off
+[t_ms=    67287] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    67290] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    67435] PUB              topic=sis234/grupo1/distance payload={"seq":62,"cm":60.3}
+[t_ms=    68437] PUB              topic=sis234/grupo1/distance payload={"seq":63,"cm":56.9}
+[t_ms=    68834] CMD_RX           led=red state=on
+[t_ms=    68834] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    68837] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    69435] PUB              topic=sis234/grupo1/distance payload={"seq":64,"cm":60.3}
+[t_ms=    70454] PUB              topic=sis234/grupo1/distance payload={"seq":65,"cm":null}
+[t_ms=    71283] CMD_RX           led=red state=off
+[t_ms=    71283] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    71287] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    71454] PUB              topic=sis234/grupo1/distance payload={"seq":66,"cm":null}
+[t_ms=    72437] PUB              topic=sis234/grupo1/distance payload={"seq":67,"cm":61.2}
+[t_ms=    72928] CMD_RX           led=red state=on
+[t_ms=    72929] LED_STATE        {"red":1,"yellow":0,"white":0}
+[t_ms=    72932] PUB              topic=sis234/grupo1/leds/state payload={"red":1,"yellow":0,"white":0}
+[t_ms=    73454] PUB              topic=sis234/grupo1/distance payload={"seq":68,"cm":null}
+[t_ms=    74456] PUB              topic=sis234/grupo1/distance payload={"seq":69,"cm":null}
+[t_ms=    74566] CMD_RX           led=red state=off
+[t_ms=    74566] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    74568] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    75439] PUB              topic=sis234/grupo1/distance payload={"seq":70,"cm":97.7}
+[t_ms=    76292] CMD_RX           led=all state=off
+[t_ms=    76293] LED_STATE        {"red":0,"yellow":0,"white":0}
+[t_ms=    76297] PUB              topic=sis234/grupo1/leds/state payload={"red":0,"yellow":0,"white":0}
+[t_ms=    76435] PUB              topic=sis234/grupo1/distance payload={"seq":71,"cm":58.1}
+[t_ms=    77437] PUB              topic=sis234/grupo1/distance payload={"seq":72,"cm":57.2}
+[t_ms=    78437] PUB              topic=sis234/grupo1/distance payload={"seq":73,"cm":57.9}
+[t_ms=    79437] PUB              topic=sis234/grupo1/distance payload={"seq":74,"cm":58.8}
+[t_ms=    80437] PUB              topic=sis234/grupo1/distance payload={"seq":75,"cm":58.9}
+[t_ms=    81456] PUB              topic=sis234/grupo1/distance payload={"seq":76,"cm":null}
+[t_ms=    82437] PUB              topic=sis234/grupo1/distance payload={"seq":77,"cm":57.2}
+[t_ms=    83437] PUB              topic=sis234/grupo1/distance payload={"seq":78,"cm":60.6}
+[t_ms=    84437] PUB              topic=sis234/grupo1/distance payload={"seq":79,"cm":57.7}
+[t_ms=    85456] PUB              topic=sis234/grupo1/distance payload={"seq":80,"cm":null}
+[t_ms=    86437] PUB              topic=sis234/grupo1/distance payload={"seq":81,"cm":57.8}
+[t_ms=    87437] PUB              topic=sis234/grupo1/distance payload={"seq":82,"cm":57.6}
+[t_ms=    88437] PUB              topic=sis234/grupo1/distance payload={"seq":83,"cm":56.9}
+[t_ms=    89437] PUB              topic=sis234/grupo1/distance payload={"seq":84,"cm":57.6}
+[t_ms=    90437] PUB              topic=sis234/grupo1/distance payload={"seq":85,"cm":57.3}
+[t_ms=    91435] PUB              topic=sis234/grupo1/distance payload={"seq":86,"cm":57.0}
+[t_ms=    92437] PUB              topic=sis234/grupo1/distance payload={"seq":87,"cm":52.2}
+[t_ms=    93437] PUB              topic=sis234/grupo1/distance payload={"seq":88,"cm":58.4}
+[t_ms=    94437] PUB              topic=sis234/grupo1/distance payload={"seq":89,"cm":58.4}
+[t_ms=    95437] PUB              topic=sis234/grupo1/distance payload={"seq":90,"cm":58.1}
+[t_ms=    96437] PUB              topic=sis234/grupo1/distance payload={"seq":91,"cm":58.5}
+[t_ms=    97437] PUB              topic=sis234/grupo1/distance payload={"seq":92,"cm":57.6}
+[t_ms=    98437] PUB              topic=sis234/grupo1/distance payload={"seq":93,"cm":58.1}
+[t_ms=    99438] PUB              topic=sis234/grupo1/distance payload={"seq":94,"cm":57.0}
+[t_ms=   100437] PUB              topic=sis234/grupo1/distance payload={"seq":95,"cm":57.2}
+[t_ms=   101437] PUB              topic=sis234/grupo1/distance payload={"seq":96,"cm":57.2}
+[t_ms=   102437] PUB              topic=sis234/grupo1/distance payload={"seq":97,"cm":58.8}
+[t_ms=   103437] PUB              topic=sis234/grupo1/distance payload={"seq":98,"cm":58.7}
+[t_ms=   104437] PUB              topic=sis234/grupo1/distance payload={"seq":99,"cm":58.3}
+[t_ms=   105437] PUB              topic=sis234/grupo1/distance payload={"seq":100,"cm":57.9}
+[t_ms=   106437] PUB              topic=sis234/grupo1/distance payload={"seq":101,"cm":57.0}
+[t_ms=   107437] PUB              topic=sis234/grupo1/distance payload={"seq":102,"cm":57.1}
+[t_ms=   108437] PUB              topic=sis234/grupo1/distance payload={"seq":103,"cm":57.0}
+[t_ms=   109437] PUB              topic=sis234/grupo1/distance payload={"seq":104,"cm":59.0}
+[t_ms=   110437] PUB              topic=sis234/grupo1/distance payload={"seq":105,"cm":57.0}
+[t_ms=   111456] PUB              topic=sis234/grupo1/distance payload={"seq":106,"cm":null}
+[t_ms=   112436] PUB              topic=sis234/grupo1/distance payload={"seq":107,"cm":33.9}
+[t_ms=   113435] PUB              topic=sis234/grupo1/distance payload={"seq":108,"cm":34.4}
+[t_ms=   114435] PUB              topic=sis234/grupo1/distance payload={"seq":109,"cm":33.9}
+[t_ms=   115435] PUB              topic=sis234/grupo1/distance payload={"seq":110,"cm":33.1}
+[t_ms=   116437] PUB              topic=sis234/grupo1/distance payload={"seq":111,"cm":33.1}
+[t_ms=   117435] PUB              topic=sis234/grupo1/distance payload={"seq":112,"cm":33.9}
+[t_ms=   118435] PUB              topic=sis234/grupo1/distance payload={"seq":113,"cm":33.1}
+[t_ms=   119435] PUB              topic=sis234/grupo1/distance payload={"seq":114,"cm":33.9}
+[t_ms=   120435] PUB              topic=sis234/grupo1/distance payload={"seq":115,"cm":33.1}
+[t_ms=   121435] PUB              topic=sis234/grupo1/distance payload={"seq":116,"cm":33.9}
+[t_ms=   122435] PUB              topic=sis234/grupo1/distance payload={"seq":117,"cm":33.1}
+[t_ms=   123435] PUB              topic=sis234/grupo1/distance payload={"seq":118,"cm":33.9}
+[t_ms=   124435] PUB              topic=sis234/grupo1/distance payload={"seq":119,"cm":33.9}
+[t_ms=   125435] PUB              topic=sis234/grupo1/distance payload={"seq":120,"cm":33.9}
+[t_ms=   126435] PUB              topic=sis234/grupo1/distance payload={"seq":121,"cm":33.9}
+[t_ms=   127435] PUB              topic=sis234/grupo1/distance payload={"seq":122,"cm":33.1}
+[t_ms=   128435] PUB              topic=sis234/grupo1/distance payload={"seq":123,"cm":33.1}
+[t_ms=   129436] PUB              topic=sis234/grupo1/distance payload={"seq":124,"cm":33.9}
+[t_ms=   130435] PUB              topic=sis234/grupo1/distance payload={"seq":125,"cm":33.9}
+[t_ms=   131435] PUB              topic=sis234/grupo1/distance payload={"seq":126,"cm":33.9}
+[t_ms=   132435] PUB              topic=sis234/grupo1/distance payload={"seq":127,"cm":33.9}
+[t_ms=   133436] PUB              topic=sis234/grupo1/distance payload={"seq":128,"cm":33.9}
+[t_ms=   134435] PUB              topic=sis234/grupo1/distance payload={"seq":129,"cm":33.9}
+[t_ms=   135435] PUB              topic=sis234/grupo1/distance payload={"seq":130,"cm":33.9}
+[t_ms=   136435] PUB              topic=sis234/grupo1/distance payload={"seq":131,"cm":33.9}

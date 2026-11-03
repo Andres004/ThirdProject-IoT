@@ -27,7 +27,7 @@ uv run --project mcp_server python tools\measure_publish_rate.py --output docs\e
 uv run --project mcp_server python tools\measure_response_time.py --output docs\evidencias\RNF3\response_time.txt
 uv run --project mcp_server python tools\analyze_accuracy.py --output docs\evidencias\RNF2\accuracy.txt
 uv run --project mcp_server python tools\analyze_stability.py docs\evidencias\RNF1\serial_log.txt --stop-at-first-drop --output docs\evidencias\RNF1\stability.txt
-uv run --project mcp_server python tools\analyze_reconnection.py docs\evidencias\RNF1\serial_log.txt --output docs\evidencias\RNF5\reconnection.txt
+uv run --project mcp_server python tools\analyze_reconnection.py docs\evidencias\RNF5\serial_log.txt --output docs\evidencias\RNF5\reconnection.txt
 ```
 
 - Mientras se mide RNF3 o RNF4, nadie debe usar Claude Desktop ni la app, para que ningún otro comando se mezcle con la prueba.

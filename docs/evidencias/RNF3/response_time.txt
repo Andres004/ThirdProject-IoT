@@ -1,24 +1,24 @@
-RNF3 response time test - 2026-10-29 15:40:53
+RNF3 response time test - 2026-11-03 15:28:19
 Broker broker.hivemq.com:1883, LED red, 20 commands, timeout 3.0 s
-#1 state=on time_ms=542.3
-#2 state=off time_ms=550.3
-#3 state=on time_ms=543.5
-#4 state=off time_ms=603.1
-#5 state=on time_ms=593.5
-#6 state=off time_ms=600.9
-#7 state=on time_ms=597.7
-#8 state=off time_ms=594.0
-#9 state=on time_ms=599.7
-#10 state=off time_ms=653.2
-#11 state=on time_ms=553.2
-#12 state=off time_ms=587.5
-#13 state=on time_ms=600.7
-#14 state=off time_ms=749.8
-#15 state=on time_ms=542.2
-#16 state=off time_ms=547.3
-#17 state=on time_ms=558.1
-#18 state=off time_ms=597.6
-#19 state=on time_ms=571.0
-#20 state=off time_ms=601.0
-Summary: n=20 lost=0 min=542.2 ms mean=589.3 ms p95=658.0 ms max=749.8 ms
-RNF3 response_time max=749.8 ms limit=1000 ms -> PASS
+#1 state=on time_ms=473.3
+#2 state=off time_ms=575.8
+#3 state=on time_ms=548.1
+#4 state=off time_ms=729.9
+#5 state=on time_ms=765.6
+#6 state=off time_ms=1597.3
+#7 state=on time_ms=576.1
+#8 state=off time_ms=732.3
+#9 state=on time_ms=465.5
+#10 state=off time_ms=712.6
+#11 state=on time_ms=832.6
+#12 state=off time_ms=1061.4
+#13 state=on time_ms=526.5
+#14 state=off time_ms=636.8
+#15 state=on time_ms=702.4
+#16 state=off time_ms=521.8
+#17 state=on time_ms=635.6
+#18 state=off time_ms=1509.4
+#19 state=on time_ms=637.2
+#20 state=off time_ms=707.6
+Summary: n=20 lost=0 min=465.5 ms mean=747.4 ms p95=1513.8 ms max=1597.3 ms
+RNF3 response_time max=1597.3 ms limit=1000 ms -> FAIL
