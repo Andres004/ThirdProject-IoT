@@ -1,5 +1,5 @@
-RNF1 stability analysis - 2026-10-29 15:42:28
+RNF1 stability analysis - 2026-11-03 13:31:47
 Log: serial_log.txt (until the first drop)
-Events=6065 distance_pubs=5889 restarts=0 wifi_lost=0 mqtt_lost=0 seq_gaps=0
-Longest run without restart: 2356.1 s; longest pause between distance PUBs: 423 ms (limit 2000 ms)
-RNF1 stability duration=2356.1 s restarts=0 max_pub_gap=423 ms limit>=600 s -> PASS
+Events=786 distance_pubs=772 restarts=0 wifi_lost=0 mqtt_lost=0 seq_gaps=3
+Longest run without restart: 775.0 s; longest pause between distance PUBs: 2001 ms (limit 3000 ms)
+RNF1 stability duration=775.0 s restarts=0 max_pub_gap=2001 ms limit>=600 s -> PASS
